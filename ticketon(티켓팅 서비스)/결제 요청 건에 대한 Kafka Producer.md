@@ -119,7 +119,7 @@ public class PaymentProducer {
 
 	public void sendPayment(final PaymentConfirmResponse response,final PaymentConfirmRequest request) {
 		PaymentMessage message = response.fromResponse(response,request);
-		KafkaTemplate.send(topic,String.valueOf(message.getOrderId()),message);
+		KafkaTemplate.send(topic,String.valueOf(message.getTicketTypeId()),message);
 		}
 	}
 
@@ -134,8 +134,8 @@ public void confirmPayment(PaymentConfirmRequest paymentConfirmRequest) {
 
 - 결제 정보만 담겨 있는 PaymentConfirmResponse 를 받아서 PaymentMessage 로 변환해준다.
 - 이 메시지를 payment-topic 으로 보내준다.
-- **orderId 를 기반으로 key 값을 정해서 라운드-로빈 방식이 아닌 key 값을 기준으로 전달한다.**
-- 같은 orderId 는 무조건 같은 파티션으로 할당된다.(Id 값이 달라도 같은 파티션에 할당될 수 있음)
+- **ticketTypeId 를 기반으로 key 값을 정해서 라운드-로빈 방식이 아닌 key 값을 기준으로 전달한다.**
+- 같은 ticketTypeId 는 무조건 같은 파티션으로 할당된다.(Id 값이 달라도 같은 파티션에 할당될 수 있음)
 
 
 - paymentService 에서 send() 메서드로 토스 **서버에서 받은 응답을 producer 로 전송**한다.

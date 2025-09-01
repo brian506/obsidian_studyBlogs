@@ -73,7 +73,7 @@ ___
 4. 컨테이너에서 **HttpServletRequest 와 HttpServletResponse 객체**를 생성하여 **Servlet 에 전달**
 5. 쓰레드는 Servlet 의 **service() 호출**
 6. service() 는 요청에 맞는 **doGet() or doPost() 호출**
-7. 6번 과정에서 _DispatcherServlet → Controller → Service → Repository_ → 응답 생성 의 순서로 실행
+7. 6번 과정에서 _DispatcherServlet → Controller → Service → Repository → 응답 생성_ 의 순서로 실행
 8. Servlet 은 인자에 맞게 생성된 **동적 페이지**를 Response 객체에 담아 **WAS 에 전달**
 9. WAS 는 Response 객체를 HttpResponse 형태로 바꾸어 Web Server 에 전달
 10. 생성된 쓰레드를 종료하고 관련된 객체 모두 제거
