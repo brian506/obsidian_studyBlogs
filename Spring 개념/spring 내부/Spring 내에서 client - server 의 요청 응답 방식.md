@@ -3,13 +3,15 @@
 
 # 정적 페이지(static pages)
 
-![[image/스크린샷 2025-08-28 오후 9.32.48.png]]
+![사진](image/sta.png)
+
+
 
 - Web Server 에 미리 저장된 파일(HTML, CSS, JS, 이미지)을 불러와 구성하는 페이지
 
 # 동적 페이지 (dynamic web page)
 
-![[image/스크린샷 2025-08-28 오후 9.34.00.png]]
+![사진](image/dy.png)
 
 
 # Web Server
@@ -41,7 +43,7 @@ ___
 ## Servlet
 
 > 클라이언트의 요청을 처리하고 결과를 반환
-![[image/스크린샷 2025-08-28 오후 9.45.33.png]]
+![사진](image/serv.png)
 
 
 **순서** :
@@ -61,7 +63,7 @@ ___
 
 # Web Service 구조
 
-![[image/스크린샷 2025-08-28 오후 9.01.56.png]]
+![사진](image/web.png)
 
 **요청/응답 flow**
 

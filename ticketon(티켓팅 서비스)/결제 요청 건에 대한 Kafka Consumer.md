@@ -1,7 +1,7 @@
  #kafka #project #spring 
 
 # 구조
-![[image/스크린샷 2025-07-30 오전 12.57.21.png]]
+![사진](./image/paymentstruc.png)
 
 ### 메시지 흐름
 
