@@ -46,8 +46,8 @@ ___
 
 **순서** :
 1. 클라이언트 요청이 들어오면 Servlet Container 는 *Servlet 이 힙 영역에 있는지* 확인
-2. 없으면 init() 을 호출하여 *초기화하고 적재*
-3. 요청에 따라서 *service() 를 통해 요청에 대한 응답 생성*
+2. 없으면 init() 을 호출하여 *초기화하고 적재*(최초 1번 시행)
+3. 요청에 따라서 *service() 를 통해 요청에 대한 응답 생성* - **모든 요청에 대해 시행**
 4. Servlet 종료 요청을 하면 destroy() 호출
 
 ## Servlet Container
@@ -95,6 +95,7 @@ ___
 - 요청하고 응답이 오지 않아도 *다른 작업을 처리하다가 응답 신호가 오면 결과를 읽어서 처리*하는 방식
 - Connection 유지 X 
 - 서로 간에 *event* 를 통해 통신하는 방식
+	- ex) messaging queue etc.
 
 ### 블로킹 (blocking)
 

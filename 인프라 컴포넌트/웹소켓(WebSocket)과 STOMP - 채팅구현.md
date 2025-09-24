@@ -48,11 +48,83 @@ ___
 
 - 메시지 전송을 효율적으로 하기 위해 나온 프로토콜의 종류이며 `PUB/SUB` 구조로 **메시지를 송신하고 수신 처리**하는 부분을 쉽게 구현할 수 있다.
 
+![[스크린샷 2025-09-10 오후 5.11.28.png]]
+
+
+## 코드를 통한 동작 순서 구현
+
+```java
+@Configuration  
+@EnableWebSocketMessageBroker  
+public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {  
+  
+    @Override  
+    public void configureMessageBroker(MessageBrokerRegistry config) {  
+        config.enableSimpleBroker("/sub");  
+        config.setApplicationDestinationPrefixes("/pub");  
+    }  
+  
+    @Override  
+    public void registerStompEndpoints(StompEndpointRegistry registry) {  
+        // todo 웹소켓에 접속허용할 주소 설정  
+        registry.addEndpoint("/chat").setAllowedOrigins("*")  
+                .withSockJS();  
+    }  
+}
+```
+
+  - `ws://localhost:19091/chat` : WebSocket **접속 주소** 
+	- API Gateway 를 이용해서 모든 요청을 처리하므로 클라이언트가 보낼때는  **`19091` 포트 번호 사용**
+	- Chat-server 포트번호 : 8081
+	- API Gateway 가 요청을 받으면 **내부적으로 Chat-server 로 라우팅**
+- 서버에 접속 후 메시지 전송 주소(Destination) : `/pub/chat/sendMessage`
+	- 앞에 http 나 ws 안붙음
+- 메시지를 받을 주소 : `/sub/chat/room/123`
 ### 동작 흐름
 
-1. 채팅방 생성
-	- pub/sub 을 위한 topic 생성
-2. 채팅방 입장
-	- 채팅방 관련 topic 구독
-3. 채팅방 송수신
-	- 해당 채팅방 topic 으로 메시지를 발송(Pub) 하거나 수신(Sub)할 수 있음
+#### <구독 단계>
+
+1. 클라이언트가 서버에 `"/topic/chat/room/123"` 와 같은 요청을 보내면 **메시지 브로커가** `enableSimpleBroker("/topic")`에 설정된 `/topic`으로 오는 _요청을 채팅방 ID 에 맞게 자동으로 구독해준다._
+
+```java
+@Controller  
+@RequiredArgsConstructor  
+public class ChatController {  
+  
+    private final ChatService chatService;  
+  
+    // = /app/sendMessage  
+    // publish / send : 발행 역할  
+    @MessageMapping("/sendMessage") // 서버에서 메시지 수신  
+    public void sendMessage(Message message){  
+        chatService.sendMessage(message);  
+    }  
+}
+
+@Service  
+@RequiredArgsConstructor  
+public class ChatService {  
+  
+    private final MessageRepository messageRepository;  
+    private final SimpMessagingTemplate messagingTemplate;  
+  
+    public void sendMessage(final Message message){  
+        // 1. 메시지 객체 생성  
+       Message messageToSave = Message.saveMessage(message);  
+  
+       // 2. 메시지 저장하고 클라이언트들에게 브로드캐스팅  
+       messageRepository.save(messageToSave)  
+               .doOnSuccess(savedMessage -> {  
+                   // 브로드캐스팅 ( 클라이언트들이 메시지를 받기 위해 구독하는 주소 )                   String destination = "/topic/chat/room/" + savedMessage.getRoomId();  
+                   messagingTemplate.convertAndSend(destination,savedMessage);  
+               })  
+               .subscribe();  
+    }
+```
+
+#### <발행 단계>
+
+2. 해당 채팅방에 구독하고 있는 사용자가 메시지를 보내면 `"/app/sendMessage"`가 호출되어 메시지를 발행한다.
+3. `ChatService`는 메시지를 DB에 저장한 후 `messagingTemplate`을 이용해 **`/topic/chat/room/123`**으로 최종 메시지를 보낸다.
+4. *메시지 브로커*는 해당 채팅방을 구독하고 있는 사용자들에게 메시지를 **브로드캐스팅해준다.**
+

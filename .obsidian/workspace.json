@@ -1,61 +1,59 @@
 {
   "main": {
-    "id": "09b09250b31ea687",
+    "id": "d2deb7b6c0b00517",
     "type": "split",
     "children": [
       {
-        "id": "640cda62fb6f8c2b",
+        "id": "a9f9d3ad2b45abe4",
         "type": "tabs",
         "children": [
           {
-            "id": "3e7dbbeb254b5a00",
+            "id": "66c070bc1900cfe5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB 관련 개념/비관적 락-낙관적 락-레디스 락.md",
+                "file": "MSA 기반 인증,인가/📝 MSA 기반 프로젝트.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "비관적 락-낙관적 락-레디스 락"
-            }
-          },
-          {
-            "id": "60cf4b0b34020401",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ticketon(티켓팅 서비스)/🎫  비관적락과 레디스락 처리.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🎫  비관적락과 레디스락 처리"
+              "title": "📝 MSA 기반 프로젝트"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "5fed60eb8672ce31",
+    "id": "6b014ed7724a452f",
     "type": "split",
     "children": [
       {
-        "id": "e1b9bf553008fcdf",
+        "id": "9767ddf32bf423cb",
         "type": "tabs",
         "children": [
           {
-            "id": "d9bf04335017b66d",
+            "id": "e2d5147ff9877c33",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "e348a9202f08455d",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "file:",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -67,7 +65,7 @@
             }
           },
           {
-            "id": "17aefabd224d6016",
+            "id": "240f5848a0a2a565",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -75,42 +73,28 @@
               "icon": "lucide-bookmark",
               "title": "북마크"
             }
-          },
-          {
-            "id": "a042706851977892",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "파일 탐색기"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 200
   },
   "right": {
-    "id": "969fc55ed1374192",
+    "id": "3744353d0a22725b",
     "type": "split",
     "children": [
       {
-        "id": "9027800a999aa428",
+        "id": "81430ed286d404ce",
         "type": "tabs",
         "children": [
           {
-            "id": "a481388218985a1e",
+            "id": "6d2b1e39c5e25cc1",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ticketon(티켓팅 서비스)/🎫 Ticket-on 프로젝트 소개.md",
+                "file": "docker/📌 docker 필수 개념.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "🎫 Ticket-on 프로젝트 소개 의 백링크"
+              "title": "📌 docker 필수 개념 의 백링크"
             }
           },
           {
-            "id": "a3f3920be5a54be5",
+            "id": "63002c931aa20211",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "인프라 컴포넌트/Kafka vs Redis.md",
+                "file": "docker/📌 docker 필수 개념.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Kafka vs Redis 의 나가는 링크"
+              "title": "📌 docker 필수 개념 의 나가는 링크"
             }
           },
           {
-            "id": "942db1331591d2c7",
+            "id": "a48b1d5e96f75ad4",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -153,18 +137,18 @@
             }
           },
           {
-            "id": "2419eeff398aa5e8",
+            "id": "3802ade02ccee029",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "인프라 컴포넌트/Kafka vs Redis.md",
+                "file": "docker/📌 docker 필수 개념.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Kafka vs Redis 의 개요"
+              "title": "📌 docker 필수 개념 의 개요"
             }
           }
         ]
@@ -181,50 +165,56 @@
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
     }
   },
-  "active": "60cf4b0b34020401",
+  "active": "e2d5147ff9877c33",
   "lastOpenFiles": [
-    "ticketon(티켓팅 서비스)/🎫  예약,결제 요청 건에 대한 Nginx 처리.md",
-    "Spring 개념/어노테이션 설명.md",
-    "ticketon(티켓팅 서비스)/🎫  비관적락과 레디스락 처리.md",
-    "ticketon(티켓팅 서비스)/🎫  결제 요청 건에 대한 Kafka Consumer.md",
-    "DB 관련 개념/비관적 락-낙관적 락-레디스 락.md",
-    "낙관적 락.md",
-    "ticketon(티켓팅 서비스)/🎫 Ticket-on 프로젝트 소개.md",
-    "Spring 개념/커스텀 예외 처리(Exception).md",
-    "2025-07-24.md",
-    "✏️ Git 필수 명령어 정리.md",
-    "docker/📌 docker 필수 개념.md",
-    "docker/포트 번호.md",
-    "Spring 개념/ExceptionResolver.md",
-    "ticketon(티켓팅 서비스)/🎫  결제 요청 건에 대한 Kafka Producer.md",
-    "DB 관련 개념/connection pool.md",
-    "인프라 컴포넌트/Kafka 의 기본 구성.md",
-    "인프라 컴포넌트/Kafka vs Redis.md",
-    "부하 테스트/K6 시작 전 알아두면 좋은 개념들.md",
-    "부하 테스트",
-    "인프라 컴포넌트/Zookeeper.md",
-    "Kafka 성능 최적화.md",
-    "images/스크린샷 2025-06-27 오전 1.06.32.png",
-    "images/제목 없는 다이어그램.drawio (1).png",
-    "images/제목 없는 다이어그램.drawio (1) 1.png",
-    "images/flow2.drawio 2.png",
-    "images/스크린샷, 2025-06-17 오전 11.03.36.jpeg",
-    "images/스크린샷 2025-06-18 오후 4.12.00.png",
-    "images/스크린샷 2025-06-15 오후 7.28.14.png",
-    "images/스크린샷 2025-06-15 오후 6.16.22.png",
-    "images/스크린샷 2025-06-15 오후 6.09.13.png",
-    "images/스크린샷 2025-06-15 오후 3.26.01.png",
+    "MSA 기반 인증,인가/image/msa-struc.drawio.png",
+    "Spring Security(JWT,Cookie,Auth 2.0)/image/스크린샷 2025-08-26 오후 4.53.37.png",
+    "인프라 컴포넌트/image/스크린샷 2025-09-10 오후 5.11.28.png",
+    "DB 관련 개념/image/스크린샷 2025-09-09 오후 4.24.17.png",
+    "DB 관련 개념/image/스크린샷 2025-06-17 오후 4.45.51.png",
+    "DB 관련 개념/image/스크린샷 2025-06-17 오후 4.30.19.png",
+    "네트워크/image/스크린샷 2025-06-18 오후 4.12.00.png",
+    "인프라 컴포넌트/웹소켓(WebSocket)과 STOMP - 채팅구현.md",
+    "Spring 개념/image/스크린샷 2025-08-28 오후 9.45.33.png",
+    "Spring 개념/image/스크린샷, 2025-06-17 오전 11.03.36 2.jpeg",
+    "ticketon(티켓팅 서비스)/image/스크린샷 2025-06-27 오전 1.01.00.png",
     "인프라 컴포넌트/Nginx.md",
     "네트워크/로드밸런서.md",
-    "로드 밸런싱.md",
-    "로드밸런서.md",
-    "낙관적락-비관적락.md",
-    "docker",
-    "DB 관련 개념/낙관적 락.md",
-    "비관적 락 ",
-    "DB 관련 개념"
+    "git/image",
+    "git",
+    "ticketon(티켓팅 서비스)/image",
+    "Spring Security(JWT,Cookie,Auth 2.0)/image",
+    "Spring 개념/image",
+    "msa 아키텍처/image",
+    "MSA 기반 인증,인가/image",
+    "DB 관련 개념/image",
+    "인프라 컴포넌트/image",
+    "부하 테스트/image",
+    "docker/포트 번호.md",
+    "docker/📌 docker 필수 개념.md",
+    "msa 아키텍처/MSA 란?.md",
+    "msa 아키텍처/Eureka-Server.md",
+    "msa 아키텍처/API Gateway.md",
+    "MSA 기반 인증,인가/📝 MSA 기반 프로젝트.md",
+    "MSA 기반 인증,인가/services/Chat-Service.md",
+    "MSA 기반 인증,인가/services/Gateway-Service.md",
+    "msa 아키텍처/무제.md",
+    "MSA 기반 인증,인가/services/무제.md",
+    "MSA 기반 인증,인가/services/Auth-Service.md",
+    "MSA 기반 인증,인가/API Gateway.md",
+    "msa 아키텍처/MSA 란? 2.md",
+    "ticketon(티켓팅 서비스)/🧪 레디스 락의 트랜잭션 정합성 보장과 부하테스트 성능 측정.md",
+    "ticketon(티켓팅 서비스)/🔓 비관적락과 레디스락 처리.md",
+    "msa 아키텍처 3/MSA 란?.md",
+    "msa 아키텍처 2/MSA 란?.md",
+    "msa 아키텍처 3/API Gateway.md",
+    "msa 아키텍처 2/API Gateway.md",
+    "MSA 기반 인증,인가/📝 MSA 기반 프로젝트 2.md",
+    "인프라 컴포넌트/kafka/Kafka 의 기본 구성.md",
+    "인프라 컴포넌트/kafka/Kafka vs Redis.md"
   ]
 }

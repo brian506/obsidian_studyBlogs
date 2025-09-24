@@ -11,10 +11,14 @@
             "id": "c171de46b952f252",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "DB 관련 개념 2/쿼리DSL.md",
+                "mode": "preview",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "쿼리DSL"
             }
           }
         ]
@@ -94,6 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "DB 관련 개념 2/쿼리DSL.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -148,5 +153,44 @@
     }
   },
   "active": "c171de46b952f252",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "DB 관련 개념 2/connection pool.md",
+    "Spring Security(JWT,Cookie,Auth 2.0)/Class/JwtAuthenticationFilter.md",
+    "DB 관련 개념/connection pool.md",
+    "Spring Security(JWT,Cookie,Auth 2.0)/📝 로그인 구현 프로젝트.md",
+    "Spring Security(JWT,Cookie,Auth 2.0)/Class/CustomLoginAuthenticationFilter.md",
+    "Spring Security(JWT,Cookie,Auth 2.0)/Class/UserDetailsService.md",
+    "Spring Security(JWT,Cookie,Auth 2.0)/oauth2.0/RefreshToken 을 Redis 에 저장하는 이유와 방법.md",
+    "Spring Security(JWT,Cookie,Auth 2.0)/Class/SecurityConfig.md",
+    "Spring Security(JWT,Cookie,Auth 2.0)/Class/LoginService.md",
+    "네트워크 2/로드밸런서.md",
+    "네트워크 2",
+    "인프라 컴포넌트 2/kafka/Kafka 의 기본 구성.md",
+    "인프라 컴포넌트 2/kafka/Kafka vs Redis.md",
+    "인프라 컴포넌트 2/예약,결제 요청 건에 대한 Nginx 처리.md",
+    "인프라 컴포넌트 2/Zookeeper.md",
+    "인프라 컴포넌트 2/kafka",
+    "인프라 컴포넌트 2/Nginx.md",
+    "인프라 컴포넌트 2/웹소켓(WebSocket)과 STOMP - 채팅구현.md",
+    "인프라 컴포넌트 2",
+    "MSA 기반 인증,인가 2/API Gateway.md",
+    "MSA 기반 인증,인가 2",
+    "ticketon(티켓팅 서비스) 2/🧪 레디스 락의 트랜잭션 정합성 보장과 부하테스트 성능 측정.md",
+    "ticketon(티켓팅 서비스) 2/결제 요청 건에 대한 Kafka Consumer.md",
+    "ticketon(티켓팅 서비스) 2/🔓 비관적락과 레디스락 처리.md",
+    "ticketon(티켓팅 서비스) 2/결제 요청 건에 대한 Kafka Producer.md",
+    "ticketon(티켓팅 서비스) 2/🎫  Ticket-on 프로젝트 소개.md",
+    "ticketon(티켓팅 서비스) 2",
+    "부하 테스트 2/K6 시작 전 알아두면 좋은 개념들.md",
+    "부하 테스트 2",
+    "Spring 개념 2/exception/ExceptionResolver.md",
+    "Spring 개념 2/exception/커스텀 예외 처리(Exception).md",
+    "Spring 개념 2/domain/페이징 기법으로 요청과 응답.md",
+    "Spring 개념 2/exception",
+    "Spring 개념 2/domain",
+    "Spring 개념 2/api",
+    "Spring 개념 2/spring 내부",
+    "images/스크린샷 2025-09-10 오후 5.11.28.png",
+    "images/스크린샷 2025-09-09 오후 4.24.17.png"
+  ]
 }
