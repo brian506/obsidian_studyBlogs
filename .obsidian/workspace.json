@@ -11,17 +11,42 @@
             "id": "66c070bc1900cfe5",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "ticketon(티켓팅 서비스)/image/flow2.drawio 2.png"
+              },
+              "icon": "lucide-image",
+              "title": "flow2.drawio 2"
+            }
+          },
+          {
+            "id": "4d91508fc2b6b8b8",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "ticketon(티켓팅 서비스)/image/스크린샷 2025-06-27 오전 1.01.00.png"
+              },
+              "icon": "lucide-image",
+              "title": "스크린샷 2025-06-27 오전 1.01.00"
+            }
+          },
+          {
+            "id": "ed14386dced8f3ee",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "MSA 기반 인증,인가/📝 MSA 기반 프로젝트.md",
+                "file": "ticketon(티켓팅 서비스)/결제 요청 건에 대한 Kafka Producer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "📝 MSA 기반 프로젝트"
+              "title": "결제 요청 건에 대한 Kafka Producer"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -166,24 +191,37 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false
+      "bases:새 베이스 생성하기": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e2d5147ff9877c33",
+  "active": "ed14386dced8f3ee",
   "lastOpenFiles": [
-    "MSA 기반 인증,인가/image/msa-struc.drawio.png",
-    "Spring Security(JWT,Cookie,Auth 2.0)/image/스크린샷 2025-08-26 오후 4.53.37.png",
-    "인프라 컴포넌트/image/스크린샷 2025-09-10 오후 5.11.28.png",
-    "DB 관련 개념/image/스크린샷 2025-09-09 오후 4.24.17.png",
-    "DB 관련 개념/image/스크린샷 2025-06-17 오후 4.45.51.png",
-    "DB 관련 개념/image/스크린샷 2025-06-17 오후 4.30.19.png",
-    "네트워크/image/스크린샷 2025-06-18 오후 4.12.00.png",
-    "인프라 컴포넌트/웹소켓(WebSocket)과 STOMP - 채팅구현.md",
-    "Spring 개념/image/스크린샷 2025-08-28 오후 9.45.33.png",
-    "Spring 개념/image/스크린샷, 2025-06-17 오전 11.03.36 2.jpeg",
+    "ticketon(티켓팅 서비스)/결제 요청 건에 대한 Kafka Consumer.md",
+    "ticketon(티켓팅 서비스)/image/스크린샷 2025-07-30 오전 12.57.21.png",
     "ticketon(티켓팅 서비스)/image/스크린샷 2025-06-27 오전 1.01.00.png",
-    "인프라 컴포넌트/Nginx.md",
+    "ticketon(티켓팅 서비스)/🎫  Ticket-on 프로젝트 소개.md",
+    "ticketon(티켓팅 서비스)/image/fixedRedisLock.png",
+    "ticketon(티켓팅 서비스)/image/flow.png",
+    "ticketon(티켓팅 서비스)/image/flow2.drawio 2.png",
+    "ticketon(티켓팅 서비스)/image/IMG_0244.png",
+    "ticketon(티켓팅 서비스)/image/KakaoTalk_Photo_2025-06-01-08-17-49.png",
+    "ticketon(티켓팅 서비스)/image/pessimisticLock.png",
+    "ticketon(티켓팅 서비스)/image/redisLock.png",
+    "인프라 컴포넌트/웹소켓(WebSocket)과 STOMP - 채팅구현.md",
+    "인프라 컴포넌트/예약,결제 요청 건에 대한 Nginx 처리.md",
+    "인프라 컴포넌트/kafka/Kafka vs Redis.md",
+    "인프라 컴포넌트/image/스크린샷 2025-09-10 오후 5.11.28.png",
+    "인프라 컴포넌트/kafka/Kafka 의 기본 구성.md",
+    "DB 관련 개념/비관적 락-낙관적 락-레디스 락.md",
     "네트워크/로드밸런서.md",
+    "ticketon(티켓팅 서비스)/🧪 레디스 락의 트랜잭션 정합성 보장과 부하테스트 성능 측정.md",
+    "MSA 기반 인증,인가/📝 MSA 기반 프로젝트.md",
+    "Spring 개념/spring 내부/Spring 내에서 client - server 의 요청 응답 방식.md",
+    "인프라 컴포넌트/Nginx.md",
+    "DB 관련 개념/MongoDB.md",
+    "Spring Security(JWT,Cookie,Auth 2.0)/Class/CustomLoginAuthenticationFilter.md",
+    "msa 아키텍처/API Gateway.md",
     "git/image",
     "git",
     "ticketon(티켓팅 서비스)/image",
@@ -198,23 +236,11 @@
     "docker/📌 docker 필수 개념.md",
     "msa 아키텍처/MSA 란?.md",
     "msa 아키텍처/Eureka-Server.md",
-    "msa 아키텍처/API Gateway.md",
-    "MSA 기반 인증,인가/📝 MSA 기반 프로젝트.md",
     "MSA 기반 인증,인가/services/Chat-Service.md",
     "MSA 기반 인증,인가/services/Gateway-Service.md",
     "msa 아키텍처/무제.md",
     "MSA 기반 인증,인가/services/무제.md",
     "MSA 기반 인증,인가/services/Auth-Service.md",
-    "MSA 기반 인증,인가/API Gateway.md",
-    "msa 아키텍처/MSA 란? 2.md",
-    "ticketon(티켓팅 서비스)/🧪 레디스 락의 트랜잭션 정합성 보장과 부하테스트 성능 측정.md",
-    "ticketon(티켓팅 서비스)/🔓 비관적락과 레디스락 처리.md",
-    "msa 아키텍처 3/MSA 란?.md",
-    "msa 아키텍처 2/MSA 란?.md",
-    "msa 아키텍처 3/API Gateway.md",
-    "msa 아키텍처 2/API Gateway.md",
-    "MSA 기반 인증,인가/📝 MSA 기반 프로젝트 2.md",
-    "인프라 컴포넌트/kafka/Kafka 의 기본 구성.md",
-    "인프라 컴포넌트/kafka/Kafka vs Redis.md"
+    "MSA 기반 인증,인가/API Gateway.md"
   ]
 }
