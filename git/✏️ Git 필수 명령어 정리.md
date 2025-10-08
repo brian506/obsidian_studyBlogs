@@ -1,3 +1,8 @@
+# 리포지토리와 인텔리제이 연동
+1. `git init`
+2. `git remote add origin https://github.com/계정이름/리포지토리이름.git
+3. `git add .` 
+4. `git commit -m "Initial commit"`
 
 
 # 브랜치 작업
