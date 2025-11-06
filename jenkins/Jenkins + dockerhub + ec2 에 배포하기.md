@@ -149,13 +149,16 @@ stage('Build Jar') {
 stage('Build Docker Images') {
     steps {
         sh """
-            docker build -t $DOCKER_HUB_USER/eureka-server:1.0.3 ./eureka-server
+            docker build --platform linux/amd64 -t $DOCKER_HUB_USER/eureka-server:1.0.3 ./eureka-server
             ...
         """
     }
 }
 ```
 - docker-compose.yml 에 있는 `사용자명/이미지명:버전` 와 같이 Docker Image Build
+- `--platform linux/amd64 -t` 
+	- EC2 CPU 사양은 보통 `x86` 인데 mac 은 ARM 이므로 이미지가 ARM 으로 빌드됨
+		-> EC2 에 빌드할 때 위와 같이 `linux/amd64`사양으로 빌드해야됨(AMD 와 ARM 차이)
 
 #### 3. Push Docker Image
 Jenkins 서버에서 만들어둔 Image를 DockerHub 으로 Push

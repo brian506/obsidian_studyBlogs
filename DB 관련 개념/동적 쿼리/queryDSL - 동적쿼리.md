@@ -1,4 +1,4 @@
-#인터페이스 #database 
+#인터페이스 #database #mysql 
 
 ___
 
@@ -54,6 +54,8 @@ JPAQueryFactory queryFactory;
 - QClass 라이브러리를 상단에 추가해야 한다.
 - Q 객체의 인스턴스를 사용한다.
 
+#### 인식 안될 때
+`./gradlew clean build`
 ___
 
 ## 코드 예시 요구사항

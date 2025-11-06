@@ -6,7 +6,7 @@
 ___
 # 목표
 
-![사진](image/socketconn.png)
+![사진](인프라%20컴포넌트/image/socketconn.png)
 # 흐름
 1. **채팅방 생성** : 메시지를 보내기 위한 채팅방 먼저 생성
 2. **브라우저** : `ws://localhost:19091/chat` 으로 WS 업그레이드 요청(게이트웨이)
@@ -94,31 +94,39 @@ public void registerStompEndpoints(StompEndpointRegistry registry) {
 	- 이후 모든 메시지 처리는 이 인증 과정을 성공한 사용자들에게만 허용
 
 ```java
+
+// StompHandler ...
+
+private static final String USER_ID_KEY = "stompUserId";  
+    
 @Override  
-public Message<?> preSend(Message<?> message, MessageChannel channel){  
+public Message<?> preSend(Message<?> message, MessageChannel channel) {  
     StompHeaderAccessor accessor = StompHeaderAccessor.wrap(message);  
   
     // stomp connect 명령어 일때만  
-    if(StompCommand.CONNECT.equals(accessor.getCommand())){  
+    if (StompCommand.CONNECT.equals(accessor.getCommand())) {  
         // stomp 헤더에서 jwt 추출 - 클라이언트가 메시지 전송 시 헤더에 토큰 받아서 보내야됨  
         log.info("CONNECT 요청 수신. Authorization 헤더: {}", accessor.getFirstNativeHeader("Authorization"));  
         String authHeader = accessor.getFirstNativeHeader("Authorization");  
   
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {  
-            log.warn("토근이 없습니다");  
             throw new IllegalArgumentException("토큰이 없습니다.");  
         }  
         String token = authHeader.substring(7);  
   
         Authentication authentication = jwtUtil.getAuthentication(token);  
-        SecurityContextHolder.getContext().setAuthentication(authentication);  
-        // 인증정보를 STOMP 세션의 User 헤더에 저장하면서 이후 모든 메시지 처리를 이 인증정보로 통과한다  
-        accessor.setUser(authentication);  
+        var principal = (StompPrincipal) authentication.getPrincipal();  
+        accessor.setUser(principal);  
+        // 다른 프레임에서도 해당 인증 객체를 사용하기 위해 세션에 저장해둠  
+        accessor.getSessionAttributes().put(USER_ID_KEY, principal.getUserId());  
+  
+        accessor.setLeaveMutable(true);  
         log.info("✅ STOMP CONNECT 인증 성공: user={}", authentication.getName());  
     }  
-   
-    return message;
+    return message;  
+}
 ```
+- 다른 프레임에서도 인증 권한을 불러오기 위해 세션에 KEY 를 이용하여 따로 저장
 ___
 ## 메시지 권한 심사
 
@@ -136,40 +144,62 @@ public void configureClientInboundChannel(ChannelRegistration registration) {
 
 ### WebSocketSecurityConfig
 ```java
-messages
-  .nullDestMatcher().authenticated()                 // 목적지 없는 CONNECT 등
-  .simpDestMatchers("/pub/**").authenticated()       // 클라 → 서버 전송
-  .simpSubscribeDestMatchers("/topic/**").authenticated() // 구독
-  .simpTypeMatchers(CONNECT, DISCONNECT, HEARTBEAT, OTHER).permitAll()
-  .anyMessage().denyAll();
+@Bean  
+public AuthorizationManager<Message<?>> messageAuthorizationManager() {  
+    // ★ 빈 주입 대신 직접 생성  
+    MessageMatcherDelegatingAuthorizationManager.Builder messages =  
+            MessageMatcherDelegatingAuthorizationManager.builder();  
+  
+    return messages  
+            .nullDestMatcher().authenticated()                 // CONNECT 등 목적지 없는 프레임  
+            .simpDestMatchers("/pub/**").hasAuthority("ROLE_GENERAL")      // 클라 → 서버 전송  
+            .simpSubscribeDestMatchers("/topic/**").hasAuthority("ROLE_GENERAL")  
+            .simpTypeMatchers(  
+                    SimpMessageType.CONNECT,  
+                    SimpMessageType.DISCONNECT,  
+                    SimpMessageType.HEARTBEAT,  
+                    SimpMessageType.OTHER  
+            ).permitAll()                                      // 기술 프레임 허용  
+            .anyMessage().denyAll()  
+            .build();  
+}
 ```
 ___
 ## 구독 및 발행
-1. *SUBSCRIBE* : 인증 성공된 클라이언트는 메시지 전송 처리 이전에 먼저 **특정 채널 `topic/chat/room/{roomId}` 을 구독**
+1. *채팅방 입장* : 인증 성공한 사용자가 `{roomId}`의 채팅방으로 입장
+2. *SUBSCRIBE* :  메시지 전송 처리 이전에 먼저 **특정 채널 `topic/chat/room/{roomId}` 을 구독** - 프론트의 역할
 	- 해당 세션을 '구독자 목록'에 등록
 	- 이후 메시지가 발행되면 세션으로 전달
 	- 로그 : `User subscribed to destination: /topic/chat/room/68d56d654889797df6d82006`
 
-2. *SEND* : `SEND` 프레임을 `/pub/sendMessage` 로 전송
+3. *SEND* : 사용자가 '전송'을 누르면 `SEND` 프레임을 `/pub/send/message` 주소로 전송
 
-3. *MESSAGE* : `SEND` 프레임으로 들어온 메시지를 받아서 **해당 채널을 `SUBSCRIBE`한 세션들에게 `MESSAGE`프레임을 전송**
+4. *createMessage()* : 전송하는 메시지를 DB 에 저장
+
+5. *MESSAGE* : `SEND` 프레임으로 들어온 메시지를 받아서 **해당 채널을 `SUBSCRIBE`한 세션들에게 `MESSAGE`프레임을(messagingTemplate.convertAndSend()) 전송**
+	- `topic/rooms/123` 주소로 메시지 보냄
+
+6. *Broadcast* : STOMP 브로커가 `topic/rooms/123` 주소를 구독하고 있는 사용자들에게 전송
 
 ```java
-// MessageService class ....
+// PublishService class ....
 
-private final String DESTINATION_URL = "/topic/chat/room/";  
+private final SimpMessagingTemplate messagingTemplate;  
+private final String MESSAGE_DEST_URL = "/topic/chat/room/";  
+private final String ROOM_DEST_URL = "/topic/rooms/";
   
-public void sendMessage(final Message message){  
-    // 1. 메시지 객체 생성  
-    Message messageToSave = Message.saveMessage(message);  
-  
-    // 2. 메시지 DB 에 저장하고 저장된 객체 반환받음  
+// 메시지 발행  
+public void publishMessage(final MessageBroadcastResponse response){  
+    messagingTemplate.convertAndSend(MESSAGE_DEST_URL + response.roomId(),response);  
+}
+
+// MessageService ....
+// 메시지 전송  
+public void createMessage(final SendMessageEvent message,final String senderId){  
+    Message messageToSave = Message.saveMessage(message, senderId);  
     Message savedMessage = messageRepository.save(messageToSave);  
-  
-    // 3. 반환받은 객체를 사용하여 클라이언트에게 브로드캐스팅  
-    String destination = DESTINATION_URL + savedMessage.getRoomId();  
-    log.info("수신 destination : " + destination);  
-    messagingTemplate.convertAndSend(destination,savedMessage);  
+    MessageBroadcastResponse response = Message.toBroadCastResponse(savedMessage,senderId);  
+    publishService.publishMessage(response);  
 }
 ```
 ___

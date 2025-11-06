@@ -1,7 +1,7 @@
  #kafka #project #spring 
 
 # 구조
-![사진](./image/paymentstruc.png)
+![사진](paymentstruc.png)
 
 ### 메시지 흐름
 

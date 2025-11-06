@@ -1,7 +1,3 @@
 {
-  "cssTheme": "Things",
-  "theme": "moonstone",
-  "enabledCssSnippets": [
-    "my-style (1)"
-  ]
+  "cssTheme": "Things"
 }
