@@ -77,7 +77,7 @@ public static Ticket createTicket(TicketType ticketType,Member member){
 
 [[DB 차원에서의 동시성 제어]] - 쿼리 동작 방식 참고
 
-### 2. 결제(PG) 호출 후 성공 -> PAID 상태 변경 ->  아웃박스 엔티티에 저장
+### 2. 결제(PG) 호출 후 성공 -> PAID 상태 변경 ->  Outbox Entity에 저장
 
 [[PG 호출과 트랜잭션 제어]] - 참고
 
@@ -87,4 +87,28 @@ public static Ticket createTicket(TicketType ticketType,Member member){
 
 ### 3. Outbox Entity 에 INSERT 되면 메시지 발행 (백그라운드 CDC)
 
-DB 와 Kafka 의 데이터 정합성을 위해서 Outbox 패턴
+[[Debezium CDC]] - 참고
+
+**이후 Kafka 병렬 처리**
+
+```java
+// 티켓 최종 저장  
+@Transactional  
+public void issueTicket(PaymentMessage message){  
+    Ticket ticket = OptionalUtil.getOrElseThrow(ticketRepository.findById(message.getTicketId()),"존재하지 않는 티켓입니다.");  
+  
+    if(ticket.getTicketStatus() == TicketStatus.CONFIRMED){  
+        return;  
+    }  
+    if(ticket.getTicketStatus() != TicketStatus.PAID){  
+        throw new IllegalStateException("결제되지 않은 티켓입니다.");  
+    }  
+    Payment payment = message.toEntity(message);  
+    paymentRepository.save(payment);  
+    // 최종 승인된 티켓  
+    ticket.setTicketStatus(TicketStatus.CONFIRMED);  
+}
+```
+
+1. `PAID` 인 ticket -> `CONFIRMED` 로 `UPDATE` 
+2. ticket,payment 최종 저장

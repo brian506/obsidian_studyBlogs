@@ -28,7 +28,11 @@ sudo apt install -y docker.io
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo usermod -aG docker ubuntu  # root 없이 실행 가능하게
+
 sudo apt install docker-compose-plugin -y # dockerCli(docker-compose)
+# docker-compose 설치 안되면
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose # 권한부여
 ```
 
 3. **스왑 메모리 생성**(EC2 인스턴스 사양 작을 때 필수) 

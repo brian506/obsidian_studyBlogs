@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB 관련 개념/PG 호출과 트랜잭션 제어.md",
+                "file": "jenkins/Jenkins + dockerhub + ec2 에 배포하기.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PG 호출과 트랜잭션 제어"
+              "title": "Jenkins + dockerhub + ec2 에 배포하기"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "3744353d0a22725b",
@@ -200,18 +199,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3945a80c54cee88d",
+  "active": "bd6e9a0c8e0f68aa",
   "lastOpenFiles": [
+    "jenkins/Jenkins + dockerhub + ec2 에 배포하기.md",
     "인프라 컴포넌트/kafka/Debezium CDC.md",
+    "docker/📌 docker 필수 명령어.md",
+    "jenkins/Jenkins 구조.md",
+    "AWS/EC2 서버에 띄우기.md",
+    "📝 티켓팅 프로젝트/🆘 트러블 슈팅 - 락을 이용하지 않은 DB의 원자적 처리와 아웃박스 트랜잭션.md",
     "DB 관련 개념/PG 호출과 트랜잭션 제어.md",
     "DB 관련 개념/image/tran.png",
     "DB 관련 개념/connection pool.md",
-    "📝 티켓팅 프로젝트/🆘 트러블 슈팅 - 락을 이용하지 않은 DB의 원자적 처리와 아웃박스 트랜잭션.md",
     "DB 관련 개념/페이징/페이징 기법 - cursor 기반.md",
     "📝 Whiskypedia 프로젝트/🆘 트러블 슈팅 - Ngram Full-Text Search 를 활용한 조회 성능 향상.md",
     "인프라 컴포넌트/image/cdc.png",
     "DB 관련 개념/동시성 제어/DB 차원에서의 동시성 제어.md",
-    "docker/📌 docker 필수 명령어.md",
     "DB 관련 개념/페이징/페이징 기법 - offset 기반.md",
     "DB 관련 개념/동시성 제어/비관적 락-낙관적 락-레디스 락.md",
     "DB 관련 개념/동시성 제어",
@@ -236,8 +238,6 @@
     "DB 관련 개념/동적 쿼리",
     "DB 관련 개념/인덱스",
     "DB 관련 개념/페이징",
-    "DB 관련 개념/NoSQL/MongoDB 인덱스 활용.md",
-    "DB 관련 개념/NoSQL/MongoDB.md",
     "DB 관련 개념/image/tree.png",
     "DB 관련 개념/image/mongo.png",
     "DB 관련 개념/image/lock2.png",
