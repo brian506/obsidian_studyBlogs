@@ -15,11 +15,12 @@
 
 # 최신 master 반영
 
-__상황__ : 가장 최근에 merge 된 master 가져오고 싶을 때
+__상황__ : 가장 최근에 merge 된 master 가져오고 다시 작업 이어나갈때
 
 1. `git checkout [로컬 브랜치 이름]`
-2. `git fetch origin`
-3. `git merge origin/master`
+2. `git pull origin master`
+3. `git checkout [내 브랜치]`
+4. `git merge master`
 
 # 협업 시 자주 쓰이는 상황
 

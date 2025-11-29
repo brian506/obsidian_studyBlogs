@@ -34,14 +34,17 @@
 
 # 도커 compose 명령어
 
-| 목적        | 명령어                                                | 설명              |
-| --------- | -------------------------------------------------- | --------------- |
-| 컨테이너 실행   | `docker compose up -d`                             | 백그라운드 실행        |
-| 로그 확인     | `docker compose logs -f`                           | 실시간 로그 보기       |
-| 서비스 중지    | `docker compose down`                              | 네트워크/컨테이너/볼륨 정리 |
-| 빌드 및 실행   | `docker compose up --build`                        | 변경사항 반영 재빌드     |
-| 특정 파일로 실행 | `docker compose -f docker-compose-local.yml up -d` | 다른 파일로 실행       |
-| 빌드 캐시 삭제  | `docker builder prune`                             | 캐시 삭제           |
+| 목적         | 명령어                                                      | 설명              |
+| ---------- | -------------------------------------------------------- | --------------- |
+| 컨테이너 실행    | `docker compose up -d`                                   | 백그라운드 실행        |
+| 로그 확인      | `docker compose logs -f`                                 | 실시간 로그 보기       |
+| 서비스 중지     | `docker compose down`                                    | 네트워크/컨테이너/볼륨 정리 |
+| 빌드 및 실행    | `docker compose up --build`                              | 변경사항 반영 재빌드     |
+| 특정 파일로 실행  | `docker compose -f docker-compose-local.yml up -d`       | 다른 파일로 실행       |
+| 빌드 캐시 삭제   | `docker builder prune`<br>                               | 캐시 삭제           |
+| 컨테이너/볼륨 삭제 | `docker-compose -f docker-compose-local.yml down -v`<br> |                 |
+|            |                                                          |                 |
+|            |                                                          |                 |
 
 ___
 

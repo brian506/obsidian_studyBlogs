@@ -112,3 +112,14 @@ public void issueTicket(PaymentMessage message){
 
 1. `PAID` 인 ticket -> `CONFIRMED` 로 `UPDATE` 
 2. ticket,payment 최종 저장
+
+
+ 
+ 
+
+## 부하 테스트 결과
+
+ ![[test.png]]
+
+기존에 Kafka Consumer Batch 를 이용해서 나온 응답 속도 3.92s
+개선 결과 272ms

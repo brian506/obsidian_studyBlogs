@@ -23,6 +23,8 @@ ___
  //querydsl  
     implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'  
     annotationProcessor "com.querydsl:querydsl-apt:5.0.0:jakarta"  
+    annotationProcessor "jakarta.persistence:jakarta.persistence-api"  
+	annotationProcessor "jakarta.annotation:jakarta.annotation-api"
   
 }  
   
@@ -73,6 +75,18 @@ ___
 5. 결과 반환
 
 ___
+## 부등호 
+
+- **`lt()`**: Less Than ( **<** )
+    
+- **`loe()`**: Less Than or Equal ( **<=** )
+    
+- **`gt()`**: Greater Than ( **>** )
+    
+- **`goe()`**: Greater Than or Equal ( **>=** )
+    
+- **`eq()`**: Equal ( **=** )
+
 
 ## 코드 구현
 
