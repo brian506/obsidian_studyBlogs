@@ -3,7 +3,7 @@
 
 # 정적 페이지(static pages)
 
-![사진](image/sta.png)
+![사진](../../images/sta.png)
 
 
 
@@ -11,7 +11,7 @@
 
 # 동적 페이지 (dynamic web page)
 
-![사진](image/dy.png)
+![사진](../../images/dy.png)
 
 
 # Web Server
@@ -43,7 +43,7 @@ ___
 ## Servlet
 
 > 클라이언트의 요청을 처리하고 결과를 반환
-![사진](image/serv.png)
+![사진](../../images/serv.png)
 
 
 **순서** :
@@ -63,7 +63,7 @@ ___
 
 # Web Service 구조
 
-![사진](image/web.png)
+![사진](../../images/web.png)
 
 **요청/응답 flow**
 

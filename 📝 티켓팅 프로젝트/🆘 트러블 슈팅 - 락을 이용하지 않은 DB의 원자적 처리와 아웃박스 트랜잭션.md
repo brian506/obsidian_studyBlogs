@@ -19,7 +19,7 @@
 
 ## 개선 방향
 
-![[db.png]]
+![[../images/db.png]]
 
 - 락을 제거하고 DB 자체의 원자적 연산으로 동시성 제어를 수행한다.
 - Outbox 패턴을 도입하여
@@ -119,7 +119,7 @@ public void issueTicket(PaymentMessage message){
 
 ## 부하 테스트 결과
 
- ![[test.png]]
+ ![[../images/test.png]]
 
 기존에 Kafka Consumer Batch 를 이용해서 나온 응답 속도 3.92s
 개선 결과 272ms

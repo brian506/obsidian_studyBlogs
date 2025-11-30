@@ -26,7 +26,7 @@ ___
 ___
 
 ### 구조
-![사진](image/secure.png)
+![사진](../../images/secure.png)
 
 ### 코드 구현
 

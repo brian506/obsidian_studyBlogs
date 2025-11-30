@@ -5,7 +5,7 @@ MSA 아키텍처에서 사용자가 서버에 요청을 보내면 먼저 Gateway
 Gateway 는 받은 요청을 해당 서비스로 보내야 하는데, 여기서 **서비스를 찾기 위해서 Eureka Server 가 필요**로 한다.
 ___
 ## 특징
-![사진](image/eureka.png)
+![사진](../images/eureka.png)
 
 - **Serivce Registry(서비스 주소록)** : Eureka 는 각 서비스의 IP / PORT / InstanceId 를 가지고 있고 Rest 기반으로 작동
 - **Client-Server 구조** : Eureka Server에 등록된 서비스들은 Eureka Client 로 불림

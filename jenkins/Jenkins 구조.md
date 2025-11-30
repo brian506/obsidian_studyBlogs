@@ -1,6 +1,6 @@
 #Jenkins
 
-![사진](image/jenkins1.jpg)
+![사진](../images/jenkins1.jpg)
 
 ## Controller
 ### 역할  

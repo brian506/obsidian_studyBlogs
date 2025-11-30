@@ -79,7 +79,7 @@ private void savePaymentToOutbox(PaymentMessage paymentMessage){
 	
 ### 해결 방법
 
-![[tran.png]]
+![[../../images/tran.png]]
 
 
 ```java

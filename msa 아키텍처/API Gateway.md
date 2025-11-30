@@ -22,7 +22,7 @@ ___
 
 클라이언트가 다른 서비스에 접근할 때마다 매번 인증 작업을 하면 비효율적이기 때문에 API Gateway 에서 인증/인가를 처리한다.
 
-![사진](./image/gateway1.png)
+![사진](../images/gateway1.png)
 #### 순서 :
 
 1. **최초 로그인 및 토큰 발급**
@@ -62,7 +62,7 @@ ___
 ___
 
 ### 동작 방식
-![사진](./image/gateway2.png)
+![사진](../images/gateway2.png)
 
 1. 요청 수신
 2. **Handler Mapping** : 요청을 분석하여 어떤 Route 의 Predicate 조건에 부합하는지 확인

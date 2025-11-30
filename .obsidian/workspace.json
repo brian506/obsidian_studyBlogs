@@ -53,12 +53,76 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB 관련 개념/인덱스/인덱스 실제로 사용할 때.md",
+                "file": "📝 위스키 프로젝트/notification-service/FCM(Firebase Cloud Messaging) 을 이용해서 PUSH 알림 기능 구현.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "인덱스 실제로 사용할 때"
+              "title": "FCM(Firebase Cloud Messaging) 을 이용해서 PUSH 알림 기능 구현"
+            }
+          },
+          {
+            "id": "cfdd9303f7c45e24",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "images/socketconn.png"
+              },
+              "icon": "lucide-image",
+              "title": "socketconn"
+            }
+          },
+          {
+            "id": "4281d4de30506d87",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "images/struc.png"
+              },
+              "icon": "lucide-image",
+              "title": "struc"
+            }
+          },
+          {
+            "id": "80cde6e0c7277083",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "images/socketconn.png"
+              },
+              "icon": "lucide-image",
+              "title": "socketconn"
+            }
+          },
+          {
+            "id": "c67849631f6f756f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "📝 위스키 프로젝트/notification-service/FCM(Firebase Cloud Messaging) 을 이용해서 PUSH 알림 기능 구현.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "FCM(Firebase Cloud Messaging) 을 이용해서 PUSH 알림 기능 구현"
+            }
+          },
+          {
+            "id": "12c9f8264426a1a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring 개념/spring 내부/Spring 내에서 client - server 의 요청 응답 방식.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Spring 내에서 client - server 의 요청 응답 방식"
             }
           },
           {
@@ -76,7 +140,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -225,53 +289,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e2d5147ff9877c33",
+  "active": "12c9f8264426a1a6",
   "lastOpenFiles": [
+    "Spring 개념/spring 내부/영속성 컨텍스트(Persistance Context).md",
+    "Spring 개념/spring 내부/비밀번호 인코딩 방식.md",
+    "Spring 개념/exception/ExceptionResolver.md",
+    "Spring 개념/exception/커스텀 예외 처리(Exception).md",
+    "Spring 개념/spring 내부/Spring 내에서 client - server 의 요청 응답 방식.md",
+    "docker/컨테이너 간 통신.md",
+    "docker/포트 번호.md",
+    "images/b-tree.png",
+    "images/innodb2.png",
+    "images/innodb.png",
+    "images/tran.png",
+    "images/tree.png",
+    "images/mongo.png",
+    "images/lock2.png",
+    "images/lock1.png",
+    "images/b+.png",
+    "테스트 코드/단위 테스트 작성법.md",
+    "images/cdc.png",
+    "네트워크/로드밸런서.md",
+    "📝 티켓팅 프로젝트/🎫  Ticket-on 프로젝트 소개.md",
+    "📝 Whiskypedia 프로젝트/🆘 트러블 슈팅 - Ngram Full-Text Search 를 활용한 조회 성능 향상.md",
+    "📝 위스키 프로젝트/notification-service/FCM(Firebase Cloud Messaging) 을 이용해서 PUSH 알림 기능 구현.md",
+    "📝 위스키 프로젝트/chat-service/Websocket - 채팅 기능.md",
     "📝 위스키 프로젝트/board-service/게시물(피드) 인덱스 걸어보기.md",
+    "📝 위스키 프로젝트/트러블 슈팅/🆘 트러블슈팅 - 로그인 이후에 사용자 정보 입력을 하지 않았을 때.md",
+    "📝 위스키 프로젝트/트러블 슈팅/🆘 트러블 슈팅 - 채팅방 중복,동시 생성 방지 - MongoDB.md",
+    "DB 관련 개념/페이징/페이징 기법 - cursor 기반.md",
+    "images",
+    "📝 위스키 프로젝트/📝 WhiskyPedia.md",
     "DB 관련 개념/인덱스/인덱스 실제로 사용할 때.md",
+    "📝 위스키 프로젝트/notification-service",
     "DB 관련 개념/인덱스/N-gram Full-Text Index.md",
     "DB 관련 개념/인덱스/B-Tree 자료구조.md",
     "인프라 컴포넌트/웹소켓(WebSocket)과 STOMP.md",
     "📝 위스키 프로젝트/board-service",
-    "📝 위스키 프로젝트/chat-service/Websocket - 채팅 기능.md",
-    "Spring 개념/spring 내부/비밀번호 인코딩 방식.md",
-    "테스트 코드/단위 테스트 작성법.md",
     "docker/📌 docker 필수 명령어.md",
     "테스트 코드",
     "git/✏️ Git 필수 명령어 정리.md",
     "AWS/EC2 서버에 띄우기.md",
     "📝 티켓팅 프로젝트/결제 요청 건에 대한 Kafka Producer.md",
-    "📝 티켓팅 프로젝트/결제 요청 건에 대한 Kafka Consumer.md",
-    "📝 티켓팅 프로젝트/예약,결제 요청 건에 대한 Nginx 처리.md",
-    "Spring 개념/domain/S3 로 사진 업로드.md",
-    "Spring 개념/domain/연관관계 설정 - N+1 문제.md",
-    "Spring 개념/api/JSON.md",
-    "Spring 개념/api/API 주요 개념.md",
-    "docker/docker-compose 관련.md",
-    "DB 관련 개념/동적 쿼리/queryDSL - 동적쿼리.md",
-    "DB 관련 개념/페이징/페이징 기법 - cursor 기반.md",
-    "DB 관련 개념/트랜잭션/PG 호출과 트랜잭션 제어.md",
-    "📝 티켓팅 프로젝트/🆘 트러블 슈팅 - 락을 이용하지 않은 DB의 원자적 처리와 아웃박스 트랜잭션.md",
-    "📝 티켓팅 프로젝트/image/test.png",
-    "📝 티켓팅 프로젝트/image/stress.png",
-    "jenkins/Jenkins + dockerhub + ec2 에 배포하기.md",
-    "Spring Security(JWT,Cookie,Auth 2.0)/Class/CustomLoginAuthenticationFilter.md",
-    "Spring Security(JWT,Cookie,Auth 2.0)/📝 로그인 구현 프로젝트.md",
-    "DB 관련 개념/image/스크린샷 2025-11-11 17.50.00.png",
-    "DB 관련 개념/image/스크린샷 2025-11-11 17.47.43.png",
-    "DB 관련 개념/image/tran.png",
-    "인프라 컴포넌트/image/cdc.png",
     "DB 관련 개념/트랜잭션",
-    "📝 티켓팅 프로젝트/image/db.png",
-    "스크린샷 2025-11-04 18.40.46.png",
-    "📝 티켓팅 프로젝트/image/스크린샷 2025-11-04 18.38.57.png",
     "📝 티켓팅 프로젝트/트러블슈팅",
     "📝 위스키 프로젝트/트러블 슈팅",
     "DB 관련 개념/동적 쿼리",
     "DB 관련 개념/인덱스",
-    "DB 관련 개념/페이징",
-    "DB 관련 개념/image/tree.png",
-    "DB 관련 개념/image",
-    "DB 관련 개념/NoSQL"
+    "DB 관련 개념/페이징"
   ]
 }

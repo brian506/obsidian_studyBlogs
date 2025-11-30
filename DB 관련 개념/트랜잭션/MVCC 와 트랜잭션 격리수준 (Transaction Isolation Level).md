@@ -44,11 +44,11 @@ Redo 로그는 **데이터 변경 후의 내용**을 기록해두는 저장 공�
 ### 예시
 MySQL은 **Undo Log** 을 통해 MVCC 를 구현한다.
 
-![[스크린샷 2025-11-11 17.47.43.png]]
+![[../../images/innodb.png]]
 
 만약 위와 같은 테이블이 있을 때 `UPDATE member SET area = "경기" WHERE id =1` 쿼리를 발생했다고 하자.
 
-![[스크린샷 2025-11-11 17.50.00.png]]
+![[../../images/innodb2.png]]
 
 - `COMMIT` 여부와 무관하게 InnoDB 는 새로운 값이 반영된다.
 - Undo 로그에는 변경 전의 값만 복사된다.

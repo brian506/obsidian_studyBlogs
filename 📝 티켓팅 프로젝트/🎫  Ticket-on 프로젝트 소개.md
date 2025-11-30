@@ -16,12 +16,12 @@
 
 ### 시스템 아키텍처(예약)
 
-![사진](flow.png)
+![사진](../images/flow.png)
 
 ## 참고 링크
 
 ### 시스템 아키텍처(결제)
-![사진](kafkastruc.png)
+![사진](../images/kafkastruc.png)
 
 
 
@@ -39,7 +39,7 @@ ___
 
 ### 부하 테스트 모니터링
 
-![사진](stress.png)
+![사진](../images/stress.png)
 
 - Opentelemetry : 앱 내부 로그, 메트릭,트레이스 수집
 - Loki : 애플리케이션 시스템 로그 수집 및 검색
