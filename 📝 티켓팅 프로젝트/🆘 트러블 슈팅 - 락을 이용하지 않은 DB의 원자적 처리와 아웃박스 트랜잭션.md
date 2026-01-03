@@ -79,7 +79,7 @@ public static Ticket createTicket(TicketType ticketType,Member member){
 
 ### 2. 결제(PG) 호출 후 성공 -> PAID 상태 변경 ->  Outbox Entity에 저장
 
-[[PG 호출과 트랜잭션 제어]] - 참고
+[[🆘 PG 호출과 트랜잭션 제어]] - 참고
 
 1. PG 사 결제 성공
 2. `PENDING`-> `PAID` 로 상태 변경 (expiredAt 이 지났거나 이미 처리된 요청은 실패 응답 - 환불)
