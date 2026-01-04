@@ -22,6 +22,43 @@ JPA 에서 엔티티를 효율적으로 관리하기 위해 사용되는 보이�
 
 ___
 
+## save() 메서드 동작 원리
+
+save() 는 내부적으로 아래와 같이 구성되어 있다.
+
+```java
+@Transactional 
+@Override 
+public <S extends T> S save(S entity) { 
+	Assert.notNull(entity, "Entity must not be null"); 
+	
+	if (entityInformation.isNew(entity)) {
+		 em.persist(entity); // (1) 새로운 엔티티일 때 return entity; 
+	} 
+	else { 
+		return em.merge(entity); // (2) 기존 엔티티일 때 
+		} 	
+	}
+```
+
+JPA는 기본적으로 엔티티의 ID 값을 보고 판단한다.
+**ID 값이 없을 때** : 새로운 엔티티로 간주하여 `persist()` 호출
+**ID 값이 있을 때** : 수정되는 엔티티로 간주하여 `merge()` 호출
+
+>`persist()`
+- 트랜잭션이 커밋되거나 `flush()` 되면 INSERT 쿼리
+- SELECT 없이 바로 INSERT
+>`merge()`
+- ID 만 넣은 새 객체일 때
+	- 영속성 컨텍스트에서 SELECT 를 거치지 않은 객체이기 때문에 1차 캐시가 없으므로 DB 에 먼저 SELECT 처리
+	- 그 다음에 INSERT
+	- 이렇게 되면 DB SELECT, ,merge(INSERT or UPDATE) 호출 두번 처리됨
+- 1차 캐시에 저장된 객체일 때
+	- 별도의 SELECT 없이 merge(UPDATE) 진행
+
+이러한 이유로 영속성 컨텍스트에 있는 객체를 UPDATE 할 때 save() 을 호출하지 않고 더티채킹으로 INSERT 쿼리를 바로 날려주고 SELECT 쿼리는 날리지 않을 수 있다.
+	
+
 ## 트랜잭션과 더티 체킹
 
 #### 영속성 컨텍스트는 트랜잭션의 생명주기와 거의 동일하다
@@ -65,4 +102,28 @@ public void complete(final Long exchangeId) {
 먼저 **MVCC** 는 DB 단에서 **여러 개의 트랜잭션**에서 발생하는 조회,수정,입력 등으로 인한 **데이터 일관성**을 보장하기 위함이다.
 
 그리고 **영속성 컨텍스트**는 JPA에서 **하나의 트랜잭션 내에서** 발생하는 조회,수정,입력 등으로 인한 **객체 일관성**을 보장하기 위함이다.
+
+## JPA 1차 캐시의 작동 원리
+
+영속성 컨텍스트의 1차 캐시는 내부적으로 `Map<ID, Entity>`구조를 가진다.
+
+캐싱을 적용할 때 오직 `findById()` 쿼리일 때(**Id 값으로만 조회할 때**만 DB 를 쿼리를 생략하고 메모리(Map)에서 반환한다.
+
+```java
+@Transactional  
+public Long updateFood(Long foodId, FoodRegister register, MultipartFile newImage, String memberKey) {  
+    FoodEntity food = foodRepository.findById(foodId);  
+    
+    Food updatedFood = foodRepository.findByIdAndMemberKey(foodId, memberKey);  
+    return food.id();  
+}
+```
+
+이렇게 `findByIdAndMemberKey()`는 **PK 조건 이외의 파라미터가 붙었으므로 1차 캐시를 확인하지 않고 바로 DB에 쿼리**를 날리게 된다.
+
+두번의 쿼리 모두 `findByIdAndMemberKey()` 로 조회한 엔티티를 활용한다고 하더라도 두번째 쿼리에서는 1차 캐시를 확인하지 않기 때문에 1차 캐시를 활용할 수 없다.
+
+두 번의 쿼리를 날리지 않고 1차 캐시를 적용하기 위해서는 PK 조건으로의 조회 쿼리(`findById()`)를 날려야한다.
+
+
 
