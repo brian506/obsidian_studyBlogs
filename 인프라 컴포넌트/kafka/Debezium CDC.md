@@ -142,3 +142,21 @@ OutboxMessage message = OutboxMessage.toEntityFromTicket(jsonPayload);
 만약 JsonDeserializer 로 받게 되면 DTO 필드값에는 없는 `scheme, payload` 이 있어서 변환에 실패하여 모든 객체가 NULL 인 상태로 받게 된다.
 
 Debezium CDC의 표준 출력을 처리하는 방식으로는 일단 String 으로 다 받고, Consumer 가 직접 payload 를 파싱해서 써야 한다.
+
+## Binglog 파일 확인
+
+Mysql 에서 해당 명령어로 확인할 수 있다.
+
+`SHOW BINARY LOGS` : 모든 파일 확인
+`SHOW MASTER STATUS` : 현재 기록중인 파일과 위치 확인
+
+## 만약 Debezium 커넥터가 장애가 발생한다면?
+
+Debezium 커넥터가 중단되더라도 MySQL 의 Binlog 는 보존된다.
+커넥터가 복구되면 마지막으로 기록된 오프셋 지점부터 다시 읽기 시작하므로 데이터 유실이 발생하지 않는다.
+
+## Kafka 브로커가 장애가 발생한다면?
+
+Debezium 은 전송에 성공할 때까지 계속 재시도하며 대기한다.
+브로커가 복구되면 쌓여있던 Binlog 데이터를 토픽으로 쏴준다.
+
