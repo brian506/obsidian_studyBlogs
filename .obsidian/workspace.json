@@ -103,12 +103,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS 공부/Java/Garbage Collection(GC).md",
+                "file": "CS 공부/Java/Call by Value, Call by Reference.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Garbage Collection(GC)"
+              "title": "Call by Value, Call by Reference"
             }
           },
           {
@@ -277,20 +277,21 @@
   },
   "active": "c67849631f6f756f",
   "lastOpenFiles": [
+    "images/스크린샷 2026-01-20 15.47.35.png",
+    "CS 공부/Java/Garbage Collection(GC).md",
+    "CS 공부/Java/JVM(Java Virtual Machine).md",
+    "images/스크린샷 2026-01-20 15.37.29.png",
+    "CS 공부/Java/Call by Value, Call by Reference.md",
+    "images/스크린샷 2026-01-20 15.31.47.png",
     "images/스크린샷 2026-01-20 00.40.03.png",
     "images/스크린샷 2026-01-20 00.28.40.png",
     "images/스크린샷 2026-01-19 21.42.56.png",
     "images/스크린샷 2026-01-19 21.42.56 1.png",
-    "CS 공부/Java/Garbage Collection(GC).md",
     "images/스크린샷 2026-01-19 21.42.29.png",
     "images/스크린샷 2026-01-19 21.38.50.png",
     "images/스크린샷 2026-01-19 21.33.34.png",
-    "CS 공부/Java/JVM(Java Virtual Machine).md",
     "images/스크린샷 2026-01-19 21.14.47.png",
     "AWS/EC2 서버에 띄우기.md",
-    "images/스크린샷 2026-01-19 14.19.18.png",
-    "images/스크린샷 2026-01-19 14.17.56.png",
-    "images/스크린샷 2026-01-19 13.46.58.png",
     "CS 공부/Java",
     "인프라 컴포넌트/kafka/Kafka 로그 관리하기.md",
     "CS 공부",
@@ -314,7 +315,6 @@
     "로깅(Logging) 모니터링/Alloy, Prometheus, Loki 시스템 구축.md",
     "로깅(Logging) 모니터링/Filter, DispatcherServlet 에서의 로깅 처리.md",
     "DB 관련 개념/트랜잭션/비관적 락-낙관적 락-레디스 락.md",
-    "DB 관련 개념/트랜잭션/DB 차원에서의 동시성 제어.md",
     "로깅(Logging) 모니터링",
     "📝 냉장고 프로젝트",
     "images",
