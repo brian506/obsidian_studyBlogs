@@ -34,6 +34,7 @@ JVM 메모리에서는 객체들은 실질적으로 **Heap 영역에서 생성**
 ### Mark And Sweep
 
 가바지 컬렉션이 될 대상을 먼저 식별(Mark) 하고,  식별(Mark) 되지 않은 객체를 제거(Sweep)한다.
+
 **Root Space** : Heap 영역을 참조하는 method area, static 변수, stack, native method stack
 
 1. **Mark 과정** : 먼저 **Root Space** 로부터 그래프 순회를 통해 연결된 객체들을 찾아내서 어떤 객체를 참조하고 있는 지 찾아서 Mark 한다.
@@ -127,6 +128,7 @@ Old Generation 에서 발생하는 GC에서 시간이 많이 소요되기 때문
 - Java 9 부터 deprecated 됐고, Java 14 에서는 사용이 중지됨
 
 ### [G1 GC (Garbage First)]
+
 ![](../../images/스크린샷%202026-01-20%2000.28.40.png)
 
 - **Java 9+** 버전의 디폴트 GC

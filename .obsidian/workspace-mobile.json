@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS 공부/Java/JVM(Java Virtual Machine).md",
+                "file": "CS 공부/Java/Garbage Collection(GC).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JVM(Java Virtual Machine)"
+              "title": "Garbage Collection(GC)"
             }
           }
         ]
@@ -98,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "DB 관련 개념 2/쿼리DSL.md",
+            "file": "CS 공부/Java/Garbage Collection(GC).md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -155,6 +155,13 @@
   },
   "active": "c171de46b952f252",
   "lastOpenFiles": [
+    "CS 공부/Java/JVM(Java Virtual Machine).md",
+    "CS 공부/Java/Call by Value, Call by Reference.md",
+    "images/스크린샷 2026-01-20 00.40.03.png",
+    "images/스크린샷 2026-01-20 15.37.29.png",
+    "images/스크린샷 2026-01-20 00.28.40.png",
+    "images/스크린샷 2026-01-20 15.47.35.png",
+    "images/스크린샷 2026-01-20 15.31.47.png",
     "DB 관련 개념 2/connection pool.md",
     "Spring Security(JWT,Cookie,Auth 2.0)/Class/JwtAuthenticationFilter.md",
     "DB 관련 개념/connection pool.md",
@@ -185,8 +192,6 @@
     "부하 테스트 2/K6 시작 전 알아두면 좋은 개념들.md",
     "부하 테스트 2",
     "Spring 개념 2/exception/ExceptionResolver.md",
-    "Spring 개념 2/exception/커스텀 예외 처리(Exception).md",
-    "Spring 개념 2/domain/페이징 기법으로 요청과 응답.md",
     "Spring 개념 2/exception",
     "Spring 개념 2/domain",
     "Spring 개념 2/api",
