@@ -38,4 +38,4 @@
 
 
 
-**참고** : [[HTTP VS HTTPS]]
+**참고** : [[../CS 공부/네트워크/HTTP VS HTTPS]]
