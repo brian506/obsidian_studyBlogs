@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS 공부/Java/Garbage Collection(GC).md",
+                "file": "📝 티켓팅 프로젝트/🆘 트러블 슈팅 - 락을 이용하지 않은 DB의 원자적 처리와 아웃박스 트랜잭션.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Garbage Collection(GC)"
+              "title": "🆘 트러블 슈팅 - 락을 이용하지 않은 DB의 원자적 처리와 아웃박스 트랜잭션"
             }
           }
         ]
@@ -155,6 +155,8 @@
   },
   "active": "c171de46b952f252",
   "lastOpenFiles": [
+    "CS 공부/네트워크/꼭 알아야 할 네트워크 개념.md",
+    "CS 공부/Java/Garbage Collection(GC).md",
     "CS 공부/Java/JVM(Java Virtual Machine).md",
     "CS 공부/Java/Call by Value, Call by Reference.md",
     "images/스크린샷 2026-01-20 00.40.03.png",
@@ -189,9 +191,7 @@
     "ticketon(티켓팅 서비스) 2/결제 요청 건에 대한 Kafka Producer.md",
     "ticketon(티켓팅 서비스) 2/🎫  Ticket-on 프로젝트 소개.md",
     "ticketon(티켓팅 서비스) 2",
-    "부하 테스트 2/K6 시작 전 알아두면 좋은 개념들.md",
     "부하 테스트 2",
-    "Spring 개념 2/exception/ExceptionResolver.md",
     "Spring 개념 2/exception",
     "Spring 개념 2/domain",
     "Spring 개념 2/api",
