@@ -22,7 +22,7 @@ db.rooms.find({'participants.user_id' : 'some_user_id', 'participants.user_type'
 ## Index
 
 위처럼 모든 데이터를 읽지 않고 Index 라는 저장공간을 따로 생성해서 필요한 컬럼에 한해서 인덱스를 참조하여 조회 성능을 높인다.
-MongoDB 인덱스는 [[../../CS 공부/데이터베이스/인덱스 구조 (B-Tree 자료구조)]] 기반으로 동작한다.
+MongoDB 인덱스는 [[../../CS 공부/데이터베이스/인덱스/인덱스 구조 (B-Tree 자료구조)]] 기반으로 동작한다.
 
 위의 예시를 기반으로 복합 인덱스를 생성하여 조회 속도를 향상시키는 상황을 보자.
 
