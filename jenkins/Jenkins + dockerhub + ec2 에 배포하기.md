@@ -23,6 +23,9 @@ ___
 // 필수 패키지 업데이트
 sudo apt update -y && sudo apt upgrade -y
 
+// 자바 설치
+sudo apt install openjdk-21-jdk -y
+
 // docker,docker-compose 파일 설치
 sudo apt install -y docker.io
 sudo systemctl enable docker
@@ -216,6 +219,7 @@ ssh -i "$SSH_KEY" -o IdentitiesOnly=yes -o StrictHostKeyChecking=no "$USER@$HOST
 1. **[1/4] connect test** : 인증키를 가지고 `ssh` 명령어로 EC2 에 원격접속
 2. **[2/4] prepare dir on remote** : EC2 서버에 `mkdir -p /home/ubuntu/app`경로를 *생성*하고 해당 파일 경로로 *이동*
 3. **[3/4] upload files via scp** :  EC2 서버에 `scp`명령어로 *docker-compose.yml 파일과 .env 파일을 해당 경로에 복사*한다.
+	- 젠킨스가 credentials 안에 있는 환경변수를 꺼내서 .env 파일을 만들고, 이걸 EC2로 배달(scp)한다
 4. **[4/4] deploy with docker compose** : 해당 경로로 이동하여
 	 1. docker-compose.yml *파일을 pull* 하고 
 	 2. docker compose up 으로 *컨테이너를 실행한다.* 
