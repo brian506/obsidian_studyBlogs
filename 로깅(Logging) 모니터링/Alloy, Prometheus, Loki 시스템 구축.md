@@ -24,6 +24,16 @@ prometheus.scrape "{임의로 설정하는 앱 이름}" {
   forward_to   = [prometheus.remote_write.default.receiver]  
 }
 
+// [Kafka 매트릭 수집] 
+prometheus.scrape "kafka_metrics" {  
+  targets = [  
+    { "__address__" = "kafka-exporter:9308" },  
+  ]  
+  metrics_path = "/metrics"  
+  scrape_interval = "15s"  
+  forward_to = [prometheus.remote_write.default.receiver]  
+}
+
 // 수집한 메트릭을 Prometheus로 전송  
 prometheus.remote_write "default" {  
   endpoint {  
@@ -42,6 +52,8 @@ Prometheus 가 Alloy 가 수집한 매트릭을 가져오는 방식(PULL)
 	- 스프링이 `/actuator/prometheus` 경로에 매트릭 상태를 노출하고 대기
 	- Prometheus 가 `remote_write` 로 데이터 긁어오는 형식
 	
+Kafka 매트릭 수집 : Zookeeper와 Kafka-exporter 를 사용하지 않고 KRAFT를 이용하여 Alloy가 카프카 매트릭을 push해서 프로메테우스에게 전송한다.
+
 
 **스프링의 `/actuator` 경로 설정**
 

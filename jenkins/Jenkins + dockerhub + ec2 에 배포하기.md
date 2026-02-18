@@ -26,16 +26,17 @@ sudo apt update -y && sudo apt upgrade -y
 // 자바 설치
 sudo apt install openjdk-21-jdk -y
 
-// docker,docker-compose 파일 설치
+// docker,docker compose 파일 설치
 sudo apt install -y docker.io
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo usermod -aG docker ubuntu  # root 없이 실행 가능하게
 
-sudo apt install docker-compose-plugin -y # dockerCli(docker-compose)
-# docker-compose 설치 안되면
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose # 권한부여
+mkdir -p ~/.docker/cli-plugins/ # docker compose plugin용 디렉토리
+curl -SL https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose # 최신 V2 플러그인 설치
+chmod +x ~/.docker/cli-plugins/docker-compose # 실행권한 부여
+
+
 ```
 
 3. **스왑 메모리 생성**(EC2 인스턴스 사양 작을 때 필수) 
@@ -82,6 +83,8 @@ services:
       context: . # 현재 jenkins 폴더 안에 dockerfile, .yml 있음
       dockerfile: Dockerfile  
     container_name: jenkins  
+    group_add:
+      - "117"
     ports:  
       - "9000:8080"  
       - "50000:50000"  
@@ -134,7 +137,10 @@ ___
 2. Build Docker Image at Jenkins
 3. Push Docker Image to DockerHub
 4. Deploy to EC2
-#### 1. Build Jar
+
+#### 0.cleanWS() / checkout SCM 
+작업 공간을 먼저 비우고, 깃 SCM 체크아웃해준다.
+#### 1.Build Jar
 자바 소스코드 파일을 컴파일하여 실행 가능한 .jar 파일로 생성
 
 ```shell
@@ -166,7 +172,8 @@ stage('Build Docker Images') {
 - `--platform linux/amd64 -t` 
 	- EC2 CPU 사양은 보통 `x86` 인데 mac 은 ARM 이므로 이미지가 ARM 으로 빌드됨
 		-> EC2 에 빌드할 때 위와 같이 `linux/amd64`사양으로 빌드해야됨(AMD 와 ARM 차이)
-
+- 멀티 모듈에서는 디렉토리 안에 있는 Dockerfile 을 읽기 위해 명시를 해줘야 한다.
+	- `./eureka-server` 처럼 해당 디렉토리의 Dockerfile 을 읽을 것이라는 명시를 해준다.
 #### 3. Push Docker Image
 Jenkins 서버에서 만들어둔 Image를 DockerHub 으로 Push
 
@@ -224,3 +231,27 @@ ssh -i "$SSH_KEY" -o IdentitiesOnly=yes -o StrictHostKeyChecking=no "$USER@$HOST
 	 1. docker-compose.yml *파일을 pull* 하고 
 	 2. docker compose up 으로 *컨테이너를 실행한다.* 
 	 3. 불필요한 이미지는 정리한다.
+
+## 트러블 슈팅
+
+### 권한문제
+`permission denied while trying to connect to the docker API at unix:///var/run/docker.sock`
+
+해결 : `docker exec -u root jenkins chmod 666 /var/run/docker.sock`
+- 모든 사용자에게 읽기 권한을 줘야함
+
+`scp: dest open "/home/ubuntu/ticket-app/.env": Permission denied`
+
+해결 : `sudo chown -R ubuntu:ubuntu /home/ubuntu/ticket-app`
+- 권한을 현재 에러 기준 root 가 권한을 가지고 있으므로, 권한을 ubuntu 에게 줘야함
+
+### 용량 문제
+`df -h` 로 ec2 내의 용량 현황을 확인할 수 있다.
+ec2 콘솔의 볼륨에서 용량을 키워 해결할 수 있다.
+
+### Container 충돌
+`Error response from daemon: Conflict. The container name "/21a62f912e60_kafka-connect" is already in use by container "33f4f743985b2e708c0db00d56f580b84e36decf89b62616899a1bf4f227569b". You have to remove (or rename) that container to be able to reuse that name.`
+- 배포 스크립트 진행마다 컨테이너 이름이 같게 되어 충돌이 일어나게 됨
+
+해결 : `docker compose down || true`
+- docker compose up 하기 전에 먼저 컨테이너를 다 지운다.

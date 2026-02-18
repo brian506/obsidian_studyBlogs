@@ -55,6 +55,9 @@ kafka-connect:
 ### register-debezium.json.template
 
 ```json
+curl -X POST http://localhost:8083/connectors \
+  -H "Content-Type: application/json" \
+  -d '
 {  
   "name": "ticket-mysql-connector",  
   "config": {  
@@ -75,6 +78,8 @@ kafka-connect:
     "topic.prefix": "ticket",  
     "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",  
     "schema.history.internal.kafka.topic": "schema-changes.ticket_on",  
+    
+    "database.connectionTimeZone": "Asia/Seoul",
 	// 아웃박스 패턴 변환
     "transforms": "outbox",  
     "transforms.outbox.type": "io.debezium.transforms.outbox.EventRouter",  

@@ -42,7 +42,7 @@ kafka:
    - zookeeper
 ```
 
-- [[Zookeeper]] 는 kafka 보다 먼저 선행되어야 하기 때문에 depends_on 이 필요하다.
+- [[../인프라 컴포넌트/kafka/Zookeeper  vs KRaft]] 는 kafka 보다 먼저 선행되어야 하기 때문에 depends_on 이 필요하다.
 
 
 ### application-local.yml 파일
