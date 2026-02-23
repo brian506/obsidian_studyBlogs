@@ -23,9 +23,6 @@ ___
 // 필수 패키지 업데이트
 sudo apt update -y && sudo apt upgrade -y
 
-// 자바 설치
-sudo apt install openjdk-21-jdk -y
-
 // docker,docker compose 파일 설치
 sudo apt install -y docker.io
 sudo systemctl enable docker
@@ -53,6 +50,16 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 docker login -u <DOCKER_HUB_USERNAME>
 ```
 - dockerhub 에서 생성한 엑세스토큰으로 비밀번호 입력
+
+5. 젠킨스 콘솔 내에서 jdk 설치 환경 설정
+- 젠킨스 plugin 에서 `Eclipse Temurin installer` 를 받아준다.
+- 젠킨스 tools에서 해당 jdk 버전에 맞는 항목을 선택한다.
+```yml
+tools {  
+    jdk 'jdk-21'  
+}
+```
+- 이런식으로 JenkinsFile 파이프라인에서 jdk 버전을 추가해준다.
 ___
 ### 2. Jenkins 로컬 서버 준비
 #### 1. Jenkins용 dockerfile & container 준비
@@ -129,6 +136,12 @@ volumes:
 	- *EC2 ssh 접속* : SSH-Username with private key 로 입력
 		- `cat <시크릿키이름>.pem` 으로 private key 확인
 	- *Dockerhub 인증* : Secret-text 로 Access token 입력
+
+#### 3. Github webhook 설정
+Github master 또는 main 브랜치에 push 되면 프로젝트가 자동으로 빌드가 되기 위한 설정이다.
+
+1. 젠킨스 콘솔에서 `Github hook trigger for GITScm polling` 체크
+2. 
 ___
 ## 배포 시작
 
