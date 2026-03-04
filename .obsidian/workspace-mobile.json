@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📝 티켓팅 프로젝트/🆘 트러블 슈팅 - 락을 이용하지 않은 DB의 원자적 처리와 아웃박스 트랜잭션.md",
+                "file": "📝 냉장고 프로젝트/면접 대비/📌 알림 발송 최적화 면접 질문 정리.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🆘 트러블 슈팅 - 락을 이용하지 않은 DB의 원자적 처리와 아웃박스 트랜잭션"
+              "title": "📌 알림 발송 최적화 면접 질문 정리"
             }
           }
         ]
@@ -40,7 +40,7 @@
             "autoReveal": false
           },
           "icon": "lucide-folder-closed",
-          "title": "Files"
+          "title": "파일 탐색기"
         }
       },
       {
@@ -98,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "CS 공부/Java/Garbage Collection(GC).md",
+            "file": "📝 냉장고 프로젝트/면접 대비/📌 알림 발송 최적화 면접 질문 정리.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "unlinkedCollapsed": true
           },
           "icon": "links-coming-in",
-          "title": "Backlinks"
+          "title": "백링크"
         }
       },
       {
@@ -143,20 +143,21 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false,
       "obsidian-git:Open Git source control": false
     }
   },
   "active": "c171de46b952f252",
   "lastOpenFiles": [
-    "CS 공부/데이터베이스/데이터베이스 저장 구조 및 조회 방식.md",
+    "📝 냉장고 프로젝트/면접 대비/📌 유통기한 식재료 쿼리 개선 면접 질문 정리.md",
     "📝 티켓팅 프로젝트/🆘 트러블 슈팅 - 락을 이용하지 않은 DB의 원자적 처리와 아웃박스 트랜잭션.md",
+    "CS 공부/데이터베이스/데이터베이스 저장 구조 및 조회 방식.md",
     "CS 공부/네트워크/꼭 알아야 할 네트워크 개념.md",
     "CS 공부/Java/Garbage Collection(GC).md",
     "CS 공부/Java/JVM(Java Virtual Machine).md",
@@ -189,7 +190,6 @@
     "MSA 기반 인증,인가 2",
     "ticketon(티켓팅 서비스) 2/🧪 레디스 락의 트랜잭션 정합성 보장과 부하테스트 성능 측정.md",
     "ticketon(티켓팅 서비스) 2/결제 요청 건에 대한 Kafka Consumer.md",
-    "ticketon(티켓팅 서비스) 2/🔓 비관적락과 레디스락 처리.md",
     "ticketon(티켓팅 서비스) 2",
     "부하 테스트 2",
     "Spring 개념 2/exception",
