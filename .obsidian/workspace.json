@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS 공부/데이터베이스/동시성 제어/Synchronized-비관적 락-낙관적 락-레디스 분산락.md",
+                "file": "📝 티켓팅 프로젝트/면접 대비/📌 티켓팅 락 관련 면접 예상 질문.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Synchronized-비관적 락-낙관적 락-레디스 분산락"
+              "title": "📌 티켓팅 락 관련 면접 예상 질문"
             }
           },
           {
@@ -215,7 +215,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CS 공부/데이터베이스/동시성 제어/Synchronized-비관적 락-낙관적 락-레디스 분산락.md",
+                "file": "📝 티켓팅 프로젝트/면접 대비/📌 티켓팅 락 관련 면접 예상 질문.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -225,7 +225,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Synchronized-비관적 락-낙관적 락-레디스 분산락 의 백링크"
+              "title": "📌 티켓팅 락 관련 면접 예상 질문 의 백링크"
             }
           },
           {
@@ -293,14 +293,22 @@
   },
   "active": "e0edbc5c48ea3d4c",
   "lastOpenFiles": [
-    "📝 티켓팅 프로젝트/면접 대비/📌 전체 아키텍처 관련 질문.md",
+    "📝 티켓팅 프로젝트/면접 대비/📌 티켓팅 전체 아키텍처 관련 질문.md",
+    "📝 티켓팅 프로젝트/면접 대비/📌 티켓팅 전체 아키텍처 관련 질문2.md",
+    "📝 티켓팅 프로젝트/면접 대비/📌 티켓팅 락 관련 면접 예상 질문.md",
+    "인프라 컴포넌트/kafka/Kafka 의 기본 구성 및 동작 원리.md",
+    "📝 티켓팅 프로젝트/결제 요청 건에 대한 Kafka Consumer.md",
+    "📝 티켓팅 프로젝트/결제 요청 건에 대한 Kafka Producer.md",
+    "인프라 컴포넌트/kafka/Kafka 에러 핸들링.md",
+    "인프라 컴포넌트/kafka/Kafka 메시지를 처리하는 방법.md",
+    "CS 공부/데이터베이스/동시성 제어/Synchronized-비관적 락-낙관적 락-레디스 분산락.md",
+    "인프라 컴포넌트/kafka/Debezium CDC.md",
+    "git/✏️ Git 필수 명령어 정리.md",
     "📝 냉장고 프로젝트/면접 대비/📌 전체 아키첵처 질문 정리.md",
     "📝 냉장고 프로젝트/면접 대비/📌 유통기한 식재료 쿼리 개선 면접 질문 정리.md",
     "📝 냉장고 프로젝트/면접 대비/📌 알림 발송 최적화 면접 질문 정리.md",
     "📝 티켓팅 프로젝트/예약,결제 요청 건에 대한 Nginx 처리.md",
     "📝 티켓팅 프로젝트/면접 대비",
-    "📝 티켓팅 프로젝트/결제 요청 건에 대한 Kafka Producer.md",
-    "📝 티켓팅 프로젝트/결제 요청 건에 대한 Kafka Consumer.md",
     "📝 티켓팅 프로젝트/🧪 레디스 락의 트랜잭션 정합성 보장과 부하테스트 성능 측정.md",
     "📝 티켓팅 프로젝트/🔓 비관적락과 레디스락 처리.md",
     "📝 티켓팅 프로젝트/트러블 슈팅/🆘 PG 호출과 트랜잭션 제어.md",
@@ -312,16 +320,8 @@
     "CS 공부/Java/가상 스레드 (Virtual Thread).md",
     "docker/📌 docker 필수 명령어.md",
     "CS 공부/데이터베이스/트랜잭션/트랜잭션 전파 (Propagation).md",
-    "CS 공부/데이터베이스/트랜잭션/DB 차원에서의 동시성 제어.md",
-    "CS 공부/데이터베이스/트랜잭션/MVCC 와 트랜잭션 격리수준 (Transaction Isolation Level).md",
-    "📝 냉장고 프로젝트/🆘 외부 서비스와의 트랜잭션 정합성.md",
-    "CS 공부/데이터베이스/인덱스/인덱스 사용.md",
-    "📝 냉장고 프로젝트/🆘 유통기한 임박한 식재료 조회 쿼리 개선.md",
-    "CS 공부/데이터베이스/인덱스/인덱스 기본 사용법.md",
     "📝 냉장고 프로젝트/면접 대비",
-    "CS 공부/데이터베이스/인덱스/인덱스 스캔 과정과 인덱스 스캔 효율.md",
     "images/스크린샷 2026-03-02 17.33.49.png",
-    "CS 공부/데이터베이스/인덱스/인덱스 구조 (B-Tree 자료구조).md",
     "images/스크린샷 2026-03-02 16.06.36.png",
     "images/스크린샷 2026-02-23 20.29.29.png",
     "images/스크린샷 2026-02-23 17.11.36.png",
