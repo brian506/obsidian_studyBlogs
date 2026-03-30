@@ -1,6 +1,8 @@
 #AWS
 
 ## ssh 로 EC2 에 접속하기
+처음에 '나 혼자만 읽기' 권한을 설정 해줘야함
+- `chmod 400 security-msa.pem`
 
 `ssh -i "security-msa.pem" ubuntu@[PublicIP]`
 # EC2 인프라 설정
