@@ -490,4 +490,14 @@ aws configure
 ### 5. terraform apply
 - 실행 ㄱㄱ
 
+## 배포 이후 확인 과정
 
+### 1. 기존 서버의 ssh 키 제거
+
+````bash
+ssh-keygen -R 43.200.235.247
+````
+
+- 이미 만들어져 있는 서버와 같은 인스턴스를 가진 서버가 ssh 키를 공유할 때 ssh 키의 호스트 키를 기록을 지워야한다.
+
+docker compose -f docker-compose-dev.yml run --rm certbot certonly \ --webroot \ --webroot-path=/var/www/certbot \ -d re-caring.duckdns.org \ --email choiyngmin506@gmail.com \ --agree-tos \ --no-eff-email

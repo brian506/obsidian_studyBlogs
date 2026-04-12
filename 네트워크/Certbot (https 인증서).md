@@ -3,42 +3,6 @@
 사용자의 요청은 80포트(http://) 또는 443포트(https://)로 요청을 할 수 있다.
 여기서 https는 http가 암호화된 프로토콜을 의미하고, 이 https 요청을 쓰려면 인증서를 통해 해당 요청을 암호화해야한다.
 
-## 브라우저 - 서버 요청 / 응답 방식
-
-사용자의 요청이 80포트로 왔을 때, 해당 요청을 443포트로 리다이렉트 해야한다.
-https 요청을 하기 전에 **TLS 핸드셰이크**라는 과정이 일어난다.
-
-1. 브라우저 -> 서버 : 
-	- 지원하는 TLS 버전 전송
-	- 브라우저가 갖고 있는 **암호화 방식 목록** 전송
-	- Client 난수 값 전송
-2. 서버 -> 브라우저 : 
-	- 서버는 브라우저의 **암호화 방식과 암호화 알고리즘**을 선택하여 전송
-	- Server 난수 값 전송
-	- **인증서** (도메인명, 공개키, 유효기간, 서명) 전송
-3. 브라우저 인증서 검증
-	- 인증서에 서명한게 신뢰할 수 있는 인증기관인가?
-	- 도메인이 일치하는가?
-	- 유효기간이 지나지 않았는가?
-4. 브라우저 -> 서버 :
-	- pre-master secret 난수값 생성 후 **서버의 공개키로 암호화**해서 전송
-5. 서버 
-	- 자신의 **개인 키로 복호화해서 pre-master secret** 획득
-
-브라우저와 서버는 서로 Sever, Client 난수 값, pre-master secret 값을 가짐
-또한, 이 세 값을 조합해서 얻은 **Session Key를 생성**
-
-이후 서로의 **Http 요청은 이 Session Key(대칭 키)로 암호화되어 통신**
-
-**TLS HandShake**
-- 비대칭 키 (공개 키/ 개인 키) 사용
-   -> pre-master secret을 안전하게 전달하기 위해
-
-**실제 HTTP 통신**
-- 대칭 키 (Session Key) 사용
-	-> 실제 데이터를 암호화/복호화 하기 위해
-
-이 과정을 하기 위해 Certbot은 인증서를 생성해주고, 인증서는 해당 서버의 신원 증명, 키 교환을 하기 위해 쓰인다.
 
 ## Certbot 적용하기
 
@@ -135,13 +99,7 @@ EOF
 ```
 
 ```bash
-docker compose -f docker-compose-dev.yml run --rm certbot certonly \
-  --webroot \
-  --webroot-path=/var/www/certbot \
-  -d re-caRing.com \
-  --email your-email@example.com \
-  --agree-tos \
-  --no-eff-email
+docker compose -f docker-compose-dev.yml run --rm \ --entrypoint certbot certbot \ certonly \ --webroot \ --webroot-path=/var/www/certbot \ -d re-caring.duckdns.org \ --email choiyngmin506@gmail.com \ --agree-tos \ --no-eff-email
 ```
 - `run --rm` : 명령 실행 후 컨테이너 자동 삭제
 - `certonly` : 인증서만 발급 (nginx 설정 건드리지 않음)

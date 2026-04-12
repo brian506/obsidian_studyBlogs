@@ -22,29 +22,17 @@
             }
           },
           {
-            "id": "cfdd9303f7c45e24",
+            "id": "4281d4de30506d87",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CS 공부/네트워크/꼭 알아야 할 네트워크 개념.md",
+                "file": "CS 공부/네트워크/SOP & CORS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "꼭 알아야 할 네트워크 개념"
-            }
-          },
-          {
-            "id": "4281d4de30506d87",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "images/struc.png"
-              },
-              "icon": "lucide-image",
-              "title": "struc"
+              "title": "SOP & CORS"
             }
           },
           {
@@ -123,20 +111,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d8d40362b8cb2fbb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AWS/Git actions 를 이용한 blue-green 무중단 배포.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Git actions 를 이용한 blue-green 무중단 배포"
-            }
-          },
-          {
             "id": "e0edbc5c48ea3d4c",
             "type": "leaf",
             "state": {
@@ -162,8 +136,7 @@
               "title": "릴리즈 노트 1.12.7"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -311,36 +284,40 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e0edbc5c48ea3d4c",
+  "active": "4281d4de30506d87",
   "lastOpenFiles": [
-    "docker/컨테이너 간 통신.md",
-    "docker/도커 엔진.md",
-    "AWS/Terraform (코드로 서버에 배포하기).md",
-    "AWS/Git actions 를 이용한 blue-green 무중단 배포.md",
+    "images/스크린샷 2026-04-12 16.16.18.png",
+    "Spring Security(JWT,Cookie,Auth 2.0)/Class/SecurityConfig.md",
+    "Spring Security(JWT,Cookie,Auth 2.0)/Class/CORSConfig.md",
+    "CS 공부/네트워크/SOP & CORS.md",
+    "CS 공부/네트워크/CDN?.md",
+    "CS 공부/네트워크/로드밸런서.md",
+    "CS 공부/네트워크/프록시 서버.md",
+    "CS 공부/네트워크/쿠키와 세션.md",
+    "CS 공부/네트워크/HTTP VS HTTPS.md",
     "네트워크/Certbot (https 인증서).md",
-    "images/스크린샷 2026-03-29 18.19.32.png",
-    "CS 공부/네트워크/꼭 알아야 할 네트워크 개념.md",
-    "images/socketconn.png",
-    "CS 공부/네트워크/네트워크 기초.md",
+    "CS 공부/네트워크/OSI 7계층 모델.md",
+    "CS 공부/네트워크/DNS.md",
     "CS 공부/네트워크/네트워크 면접 대비 질문들 정리.md",
-    "AWS/보안그룹 설정.md",
-    "AWS/EC2 서버에 띄우기.md",
+    "CS 공부/네트워크/TCP - IP 4계층.md",
+    "CS 공부/네트워크/네트워크 기초.md",
+    "CS 공부/네트워크/꼭 알아야 할 네트워크 개념.md",
+    "AWS/SAA/EC2.md",
+    "AWS/SAA/IAM.md",
+    "docker/📌 docker 필수 명령어.md",
+    "AWS/SAA",
+    "무제",
+    "무제.md",
+    "DB 관련 개념/postgre 개념들.md",
+    "📝 티켓팅 프로젝트/🧪 레디스 락의 트랜잭션 정합성 보장과 부하테스트 성능 측정.md",
     "Jenkins/Jenkins + dockerhub + ec2 에 배포하기.md",
     "Jenkins/Jenkins 구조.md",
-    "📝 위스키 프로젝트/notification-service/FCM(Firebase Cloud Messaging) 을 이용해서 PUSH 알림 기능 구현.md",
+    "📝 티켓팅 프로젝트/예약,결제 요청 건에 대한 Nginx 처리.md",
+    "📝 티켓팅 프로젝트/결제 요청 건에 대한 Kafka Producer.md",
+    "images/struc.png",
+    "images/스크린샷 2026-03-29 18.19.32.png",
+    "images/socketconn.png",
     "images/스크린샷 2026-03-25 14.52.13.png",
-    "네트워크/로드밸런서.md",
-    "네트워크/Nginx.md",
-    "docker/📌 docker 필수 명령어.md",
-    "docker/포트 번호.md",
-    "📝 티켓팅 프로젝트/트러블 슈팅/🆘 티켓 재고 복구.md",
-    "Spring Security(JWT,Cookie,Auth 2.0)/Class/JwtAuthenticationFilter.md",
-    "📌 면접 대비 (NotebookLM 통합 정리)/🎫 티켓팅 프로젝트 핵심 정리.md",
-    "📝 냉장고 프로젝트/면접 대비/📌 알림 발송 최적화 면접 질문 정리.md",
-    "📌 면접 대비 (NotebookLM 통합 정리)/📖 README.md",
-    "📝 냉장고 프로젝트/면접 대비/📌 유통기한 식재료 쿼리 개선 면접 질문 정리.md",
-    "📝 냉장고 프로젝트/면접 대비/📌 전체 아키첵처 질문 정리.md",
-    "📌 면접 대비 (NotebookLM 통합 정리)/🧊 냉장고 프로젝트 핵심 정리.md",
     "📌 면접 대비 (NotebookLM 통합 정리)",
     "images/스크린샷 2026-03-10 13.14.34.png",
     "📝 티켓팅 프로젝트/면접 대비",
@@ -350,13 +327,10 @@
     "images/스크린샷 2026-02-23 20.29.29.png",
     "images/스크린샷 2026-02-23 17.11.36.png",
     "images/스크린샷 2026-02-23 16.12.44.png",
-    "images/스크린샷 2026-02-23 16.07.06.png",
     "📝 티켓팅 프로젝트/트러블 슈팅",
     "CS 공부/데이터베이스/동시성 제어",
     "인프라 컴포넌트/Redis",
     "images/IMG_2085.heic",
-    "images/IMG_2079.heic",
-    "CS 공부/데이터베이스",
-    "TCP "
+    "images/IMG_2079.heic"
   ]
 }
