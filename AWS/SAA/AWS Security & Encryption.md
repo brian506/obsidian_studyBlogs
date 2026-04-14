@@ -110,6 +110,7 @@ CloudFront: 전역 적용 / 나머지: 리전별 적용
 ### 8. AWS Firewall Manager ⭐
 
 **AWS 조직 전체 계정의 방화벽 규칙을 중앙 관리**
+여러 계정이나 여러 VPC에 있는 Network Firewall, WAF, Security Group 규칙들을 **중앙에서 한꺼번에 관리**할 때 쓴다.
 
 - WAF 규칙, Shield Advanced, 보안 그룹, Network Firewall, Route 53 DNS Firewall
 - **새 리소스 생성 시 자동으로 규칙 적용** ← 핵심

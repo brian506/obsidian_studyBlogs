@@ -16,9 +16,11 @@ CDN(Content Delivery Network). 콘텐츠를 전 세계 **엣지 로케이션(총
 - **OAC(Origin Access Control)** 로 S3 버킷 보안 강화 — OAI(Origin Access Identity)의 후속 기능
 - CloudFront → S3 방향으로 데이터 업로드(Ingress)에도 사용 가능
 
+
 **Custom Origin (HTTP):**
 
 - ALB, EC2 인스턴스, S3 정적 웹사이트, 모든 HTTP 백엔드
+- 로드밸런싱하여 해당 경로에 뿌려줌
 
 **보안 설정 포인트 — 시험에 자주 나옴:**
 
