@@ -63,12 +63,12 @@
 
 ### 3. CloudWatch Insights 4종류 ⭐
 
-|Insight|용도|대상|
-|---|---|---|
-|**Container Insights**|컨테이너 지표+로그 수집/집계|ECS, EKS, Fargate, K8s on EC2|
-|**Lambda Insights**|Lambda 성능 모니터링|Lambda (Lambda 계층으로 제공)|
-|**Contributor Insights**|Top-N 기여자 분석|VPC Flow Logs, DNS 등 모든 로그|
-|**Application Insights**|앱 + 연관 서비스 자동 대시보드|EC2 기반 앱 (Java, .NET 등)|
+| Insight                  | 용도                 | 대상                            |
+| ------------------------ | ------------------ | ----------------------------- |
+| **Container Insights**   | 컨테이너 지표+로그 수집/집계   | ECS, EKS, Fargate, K8s on EC2 |
+| **Lambda Insights**      | Lambda 성능 모니터링     | Lambda (Lambda 계층으로 제공)       |
+| **Contributor Insights** | Top-N 기여자 분석       | VPC Flow Logs, DNS 등 모든 로그    |
+| **Application Insights** | 앱 + 연관 서비스 자동 대시보드 | EC2 기반 앱 (Java, .NET 등)       |
 
 - Contributor Insights: 불량 호스트 식별, 트래픽 최다 사용자, 오류 최다 URL 파악
 - Application Insights: SageMaker ML 내부 사용, 문제 알림은 EventBridge + SSM OpsCenter로 전송

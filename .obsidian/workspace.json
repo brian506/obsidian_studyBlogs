@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/SAA 문제 모음/문제집 2.md",
+                "file": "AWS/SAA 문제 모음/문제집 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "문제집 2"
+              "title": "문제집 3"
             }
           },
           {
@@ -61,12 +61,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/SAA/EC2 Instance Storage.md",
+                "file": "AWS/SAA/Advanced Storage.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EC2 Instance Storage"
+              "title": "Advanced Storage"
             }
           }
         ],
@@ -102,7 +102,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "EBS",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -123,8 +123,7 @@
               "title": "북마크"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -219,37 +218,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c67849631f6f756f",
+  "active": "5f47aed129641d92",
   "lastOpenFiles": [
+    "AWS/SAA/Database.md",
+    "AWS/SAA/CloudFront & Global Accelerator.md",
+    "AWS/SAA 문제 모음/문제집 3.md",
+    "AWS/SAA/CloudWatch, CloudTrail, AWS Config.md",
+    "AWS/SAA/Advanced Identity in AWS.md",
+    "AWS/SAA/Serverless (Lambda, DynamoDB, API Gateway, Step Functions).md",
+    "AWS/SAA/Serverless Architectures.md",
+    "AWS/SAA/S3.md",
+    "AWS/SAA/Advanced S3.md",
     "AWS/SAA/EC2 Instance Storage.md",
     "AWS/SAA 문제 모음/문제집 2.md",
     "AWS/SAA/Load Balancing & Auto Scaling Groups.md",
     "AWS/SAA/Data & Analytics.md",
     "AWS/SAA/AWS Security & Encryption.md",
-    "AWS/SAA/Database.md",
     "AWS/SAA/Route 53.md",
-    "AWS/SAA/CloudFront & Global Accelerator.md",
-    "AWS/SAA/CloudWatch, CloudTrail, AWS Config.md",
     "AWS/SAA/Advanced Storage.md",
     "AWS/SAA 문제 모음/문제집 1.md",
     "AWS/SAA/ECS, Fargate, ECR, EKS.md",
     "AWS/SAA/SQS, SNS, Kinesis, Amazon MQ.md",
-    "AWS/SAA/Serverless (Lambda, DynamoDB, API Gateway, Step Functions).md",
-    "AWS/SAA/Serverless Architectures.md",
     "AWS/SAA/IAM.md",
     "AWS/SAA/EC2.md",
-    "AWS/SAA/S3.md",
     "CS 공부/데이터베이스/인덱스/인덱스 기본 사용법.md",
     "images/socketconn.png",
     "AWS/SAA/VPC.md",
     "AWS/SAA/S3-Security.md",
-    "AWS/SAA/Advanced Identity in AWS.md",
-    "AWS/SAA/Advanced S3.md",
     "인프라 컴포넌트/kafka/Kafka 의 기본 구성 및 동작 원리.md",
     "AWS/SAA 문제 모음/S3 관련 문제",
     "AWS/SAA 문제 모음",
     "AWS/무제.md",
-    "AWS/SAA/Disaster Recovery & Migrations.md",
     "images/스크린샷 2026-04-13 14.40.19.png",
     "images/스크린샷 2026-04-13 14.40.09.png",
     "images/스크린샷 2026-04-13 14.37.22.png",
