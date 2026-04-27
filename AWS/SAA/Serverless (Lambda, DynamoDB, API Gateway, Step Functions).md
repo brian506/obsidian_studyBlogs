@@ -94,11 +94,11 @@ Lambda + API Gateway = **완전 서버리스 REST API**.
 
 **Endpoint Types:**
 
-|타입|설명|
-|---|---|
-|**Edge-Optimized (기본)**|글로벌 클라이언트용, CloudFront 경유|
-|**Regional**|같은 리전 클라이언트용, 수동으로 CloudFront 결합 가능|
-|**Private**|VPC 내부에서만 접근 (ENI 사용)|
+| 타입                                  | 설명                                                                           |
+| ----------------------------------- | ---------------------------------------------------------------------------- |
+| **Edge-Optimized (기본)- CloudFront** | 글로벌 클라이언트용, CloudFront 경유, <br>SSL 인증서를 반드시 **버지니아 북부(us-east-1)** 리전에 만들어야함 |
+| **Regional**                        | 같은 리전 클라이언트용, 수동으로 CloudFront 결합 가능, <br>인증서는 해당 리전에 있어야함                    |
+| **Private**                         | VPC 내부에서만 접근 (ENI 사용)                                                        |
 
 **보안:**
 

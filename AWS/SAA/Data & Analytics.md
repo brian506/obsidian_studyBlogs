@@ -88,7 +88,9 @@
 ### 6. AWS Glue ⭐⭐
 
 - **서버리스 ETL 서비스** (Extract, Transform, Load)
+- 추출 -> 변환(가공) -> 적재 작업용도
 - S3 → Parquet 변환, Glue Data Catalog로 메타데이터 관리
+- 주로 **배치 작업**에서 사용
 
 **추가 기능:**
 
