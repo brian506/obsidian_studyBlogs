@@ -1,4 +1,4 @@
-
+ 
 # JDK,JRE
 
 **JDK** 에는 **JRE(라이브러리, 개발 도구),** **JVM** 이 포함되어 있다.
@@ -86,6 +86,8 @@ Interpreter 단점을 보완하기 위해 도입된 방식으로,
 >하나씩 Interpreting 하는 것이 아니라 컴파일된 네이티브 코드를 실행하는 것이기 때문에 전체적인 실행 속도는 Interpreting 방식보다 빠르다.
   하지만 Native Code 로 변환하는데에도 비용이 소요되므로, Interpreting 방식을 사용하다가 일정 기준이 넘어가면 JIT 방식으로 넘어간다.
 
+Native Code : CPU가 직접 받아서 처리할 수 이쓴ㄴ 기계어
+Bytecode (.class) : CPU가 직접 읽지 못하고, JVM이 읽어서 실행 
 ### [Garbage Collection(GC)](Garbage%20Collection(GC).md)
 
 : JVM 은 Garbage Collector 가 **힙 메모리 영역에서 더는 사용하지 않는 메모리를 자동으로 회수**한다.

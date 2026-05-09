@@ -1,16 +1,16 @@
 
 ### 1. DB 유형 분류 ⭐⭐⭐
 
-|유형|서비스|키워드|
-|---|---|---|
-|**RDBMS (SQL/OLTP)**|RDS, Aurora|Join, 트랜잭션|
-|**NoSQL**|DynamoDB (JSON), ElastiCache (키/값), Neptune (그래프), DocumentDB (MongoDB), Keyspaces (Cassandra)|조인 없음, 유연한 스키마|
-|**객체 스토어**|S3, Glacier|대용량 파일, 아카이브|
-|**데이터 웨어하우스**|Redshift (OLAP), Athena, EMR|SQL 분석, BI|
-|**검색**|OpenSearch|비정형 텍스트, JSON 검색|
-|**그래프**|Neptune|관계 데이터, 소셜 네트워크|
-|**원장**|QLDB|불변 금융 거래 기록|
-|**시계열**|Timestream|IoT, 실시간 분석|
+| 유형                   | 서비스                                                                                            | 키워드              |
+| -------------------- | ---------------------------------------------------------------------------------------------- | ---------------- |
+| **RDBMS (SQL/OLTP)** | RDS, Aurora                                                                                    | Join, 트랜잭션       |
+| **NoSQL**            | DynamoDB (JSON), ElastiCache (키/값), Neptune (그래프), DocumentDB (MongoDB), Keyspaces (Cassandra) | 조인 없음, 유연한 스키마   |
+| **객체 스토어**           | S3, Glacier                                                                                    | 대용량 파일, 아카이브     |
+| **데이터 웨어하우스**        | Redshift (OLAP), Athena, EMR                                                                   | SQL 분석, BI       |
+| **검색**               | OpenSearch                                                                                     | 비정형 텍스트, JSON 검색 |
+| **그래프**              | Neptune                                                                                        | 관계 데이터, 소셜 네트워크  |
+| **원장**               | QLDB                                                                                           | 불변 금융 거래 기록      |
+| **시계열**              | Timestream                                                                                     | IoT, 실시간 분석      |
 
 ---
 
@@ -96,19 +96,19 @@
 
 ### 시험 TIP — 문제 유형별 정답 패턴 ⭐⭐⭐
 
-|상황|정답|
-|---|---|
-|SQL, 트랜잭션, 조인 필요|RDS 또는 Aurora|
-|고가용성 + 높은 성능 관계형 DB|Aurora|
-|예측 불가 서버리스 워크로드|Aurora Serverless|
-|인메모리 캐시 (코드 수정 OK)|ElastiCache|
-|코드 수정 없는 캐싱|ElastiCache ❌ → 다른 방법 고려|
-|NoSQL, 서버리스, 빠른 스키마|DynamoDB|
-|MongoDB 워크로드 마이그레이션|DocumentDB|
-|소셜 네트워크, 관계 그래프|Neptune|
-|Apache Cassandra 마이그레이션|Keyspaces|
-|금융 거래 불변 기록|QLDB|
-|IoT 시계열 데이터 분석|Timestream|
-|정적 파일, 대용량 객체|S3|
-|SQL 기반 데이터 분석/BI|Redshift, Athena|
-|텍스트 검색, 비정형 데이터|OpenSearch|
+| 상황                      | 정답                       |
+| ----------------------- | ------------------------ |
+| SQL, 트랜잭션, 조인 필요        | RDS 또는 Aurora            |
+| 고가용성 + 높은 성능 관계형 DB     | Aurora                   |
+| 예측 불가 서버리스 워크로드         | Aurora Serverless        |
+| 인메모리 캐시 (코드 수정 OK)      | ElastiCache              |
+| 코드 수정 없는 캐싱             | ElastiCache ❌ → 다른 방법 고려 |
+| NoSQL, 서버리스, 빠른 스키마     | DynamoDB                 |
+| MongoDB 워크로드 마이그레이션     | DocumentDB               |
+| 소셜 네트워크, 관계 그래프         | Neptune                  |
+| Apache Cassandra 마이그레이션 | Keyspaces                |
+| 금융 거래 불변 기록             | QLDB                     |
+| IoT 시계열 데이터 분석          | Timestream               |
+| 정적 파일, 대용량 객체           | S3                       |
+| SQL 기반 데이터 분석/BI        | Redshift, Athena         |
+| 텍스트 검색, 비정형 데이터         | OpenSearch               |
