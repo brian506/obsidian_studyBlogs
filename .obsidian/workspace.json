@@ -4,41 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "780812ece4c35642",
+        "id": "e66acdeb95e00456",
         "type": "tabs",
         "children": [
           {
-            "id": "c86d38d4f663e145",
+            "id": "adfc95333ac65741",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/SAA 문제 모음/문제집 17.md",
+                "file": "📝 recaring 프로젝트/ECS Rolling update (무중단 배포).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "문제집 17"
+              "title": "ECS Rolling update (무중단 배포)"
             }
           }
         ]
       },
       {
-        "id": "b50711628efadb96",
+        "id": "e91bc038185413df",
         "type": "tabs",
         "children": [
           {
-            "id": "125b9234591a8c73",
+            "id": "e4f7ac5733842d96",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/총 정리.md",
+                "file": "AWS/SAA/VPC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "총 정리"
+              "title": "VPC"
             }
           }
         ]
@@ -90,12 +90,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📝 recaring 프로젝트/로드밸런싱 방법.md",
+                "file": "📝 recaring 프로젝트/Nginx - Certbot 인증서 갱신 방법.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "로드밸런싱 방법"
+              "title": "Nginx - Certbot 인증서 갱신 방법"
             }
           },
           {
@@ -203,34 +203,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c86d38d4f663e145",
+  "active": "adfc95333ac65741",
   "lastOpenFiles": [
-    "AWS/총 정리.md",
-    "AWS/SAA/Route 53.md",
-    "AWS/SAA 문제 모음/문제집 17.md",
-    "📝 recaring 프로젝트/ssh 사용하지 않고 ssm 이용해서 보안 최적화.md",
-    "📝 recaring 프로젝트/ECS 적용하기.md",
-    "📝 recaring 프로젝트/ECS Rolling update (무중단 배포).md",
-    "📝 recaring 프로젝트/EFS 적용해보기.md",
-    "📝 recaring 프로젝트/Git actions 를 이용한 blue-green 무중단 배포.md",
-    "📝 recaring 프로젝트/Redis ECS 구축하기.md",
-    "📝 recaring 프로젝트/Terraform (코드로 서버에 배포하기).md",
-    "📝 recaring 프로젝트/SQS + SNS 적용하기.md",
     "📝 recaring 프로젝트/AlertManager로 시스템 에러 알림 받기.md",
-    "📝 recaring 프로젝트/로드밸런싱 방법.md",
-    "CS 공부/네트워크/HTTP VS HTTPS.md",
-    "CS 공부/네트워크/프록시 서버.md",
-    "CS 공부/네트워크/SOP & CORS.md",
-    "AWS/SAA 문제 모음/문제집 3.md",
-    "AWS/SAA 문제 모음/문제집 15.md",
+    "AWS/SAA 문제 모음/문제집 18.md",
+    "AWS/SAA/VPC.md",
+    "무제.canvas",
+    "📝 recaring 프로젝트/Nginx - Certbot 인증서 갱신 방법.md",
+    "AWS/총 정리.md",
+    "AWS/SAA/Advanced Storage.md",
+    "CS 공부/운영체제/I - O 메커니즘.md",
+    "CS 공부/Java/가상 스레드 (Virtual Thread).md",
+    "Claude/workflow.md",
+    "Claude/claude 시작하기.md",
+    "Claude/프로젝트에 적용하기.md",
     "Claude/Hooks.md",
+    "Claude/Claude Code Subagent.md",
+    "Claude/Tool Use Loop.md",
+    "CS 공부/데이터베이스/벌크 연산 시 주의할 점(execute, clear).md",
+    "CS 공부/데이터베이스/데이터베이스 저장 구조 및 조회 방식.md",
+    "CS 공부/데이터베이스/트랜잭션/DB 차원에서의 동시성 제어.md",
+    "CS 공부/데이터베이스/트랜잭션/트랜잭션 전파 (Propagation).md",
     "CS 공부/네트워크/TCP - IP 4계층.md",
-    "CS 공부/네트워크/OSI 7계층 모델.md",
-    "CS 공부/네트워크/DNS.md",
+    "CS 공부/네트워크/로드밸런서.md",
     "CS 공부/네트워크/네트워크 기초.md",
     "CS 공부/네트워크/꼭 알아야 할 네트워크 개념.md",
-    "CS 공부/Java/영속성 컨텍스트(Persistance Context).md",
-    "CS 공부/Java/쓰레드풀(Thread)와 커넥션 풀(Connection pool).md",
+    "CS 공부/네트워크/OSI 7계층 모델.md",
+    "📝 recaring 프로젝트/SQS + SNS 적용하기.md",
+    "📝 recaring 프로젝트/Git actions 를 이용한 blue-green 무중단 배포.md",
+    "CS 공부/데이터베이스/인덱스/인덱스 사용.md",
+    "images/스크린샷 2026-05-11 19.16.31.png",
+    "images/스크린샷 2026-05-11 19.16.12.png",
+    "images/스크린샷 2026-05-11 16.14.49.png",
     "images/스크린샷 2026-05-07 14.51.05.png",
     "images/스크린샷 2026-05-05 16.07.15.png",
     "images/스크린샷 2026-04-30 22.56.24.png",
@@ -239,9 +243,6 @@
     "images/스크린샷 2026-04-28 15.52.33.png",
     "무제",
     "images/스크린샷 2026-04-27 15.58.44.png",
-    "images/스크린샷 2026-04-27 15.57.55.png",
-    "images/스크린샷 2026-04-27 15.55.37.png",
-    "images/스크린샷 2026-04-25 17.18.15.png",
     "📝 recaring 프로젝트",
     "CS 공부/Java/면접 질문",
     "무제 1",
