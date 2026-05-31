@@ -2,7 +2,7 @@
 
 📌 Kafka 는 Cluster -> Broker -> Topic -> Partition -> Segment 로 구성되어 있다.
 
-![사진](../../images/kafka1.png)
+![사진](../../../images/kafka1.png)
 
 ___ 
 
@@ -14,7 +14,7 @@ ___
 - 메시지의 저장, 처리, 전달을 담당한다.
 - 대량의 데이터를 처리하고 생산자(producer)와 소비자(consumer)에게 메시지 서비스를 제공한다.
 
-![사진](../../images/kafka4.png)
+![사진](../../../images/kafka4.png)
 
 ### ✅ 브로커(Broker)
 
@@ -91,7 +91,7 @@ ___
 
 ## 📌 Kafka의 순서 보장
 
-![](../../images/스크린샷%202026-02-02%2017.39.22.png)
+![](../../../images/스크린샷%202026-02-02%2017.39.22.png)
 
 1. Producer(생산자)가 선택한 Topic으로 데이터를 발행한다.
 

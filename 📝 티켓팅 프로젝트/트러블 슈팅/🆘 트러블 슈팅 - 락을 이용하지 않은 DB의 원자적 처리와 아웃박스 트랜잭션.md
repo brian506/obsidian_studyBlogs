@@ -89,7 +89,7 @@ public static Ticket createTicket(TicketType ticketType,Member member){
 
 ### 3. Outbox Entity 에 INSERT 되면 메시지 발행 (백그라운드 CDC)
 
-[[Debezium CDC]] - 참고
+[[../../CS 공부/인프라 컴포넌트/kafka/Debezium CDC]] - 참고
 
 **이후 Kafka 병렬 처리**
 
@@ -188,7 +188,7 @@ public void savePaymentToOutbox(OutboxEvent event){
 
 ## Kafka 컨슈머 에러는 어떻게 관리하는가?
 
-[Kafka 에러 핸들링](../../인프라%20컴포넌트/kafka/Kafka%20에러%20핸들링.md)- 참고
+[Kafka 에러 핸들링](../../CS%20공부/인프라%20컴포넌트/kafka/Kafka%20에러%20핸들링.md)- 참고
 
 만약 컨슈머 내에 있는 비즈니스 로직이 실패하면 어떻게 처리해야할까?
 컨슈머로 메시지를 전달하기 전에 PG 에서 결제가 완료된 건은 CDC 가 아웃박스 엔티티에 `PAID` 상태로 관리하고 있다.

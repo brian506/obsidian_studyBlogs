@@ -1,6 +1,6 @@
 #kafka 
 
-![[../../images/cdc.png]]
+![[../../../images/cdc.png]]
 
 ## CDC(Change Data Capture) 란?
 

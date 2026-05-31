@@ -82,9 +82,19 @@ Image URI 형식
 l
 ## 배포 흐름
 
-1. Code Push : Github에 코드 올림
-2. Build & Push (CI) : Github Actions가 코드를 가져와서 빌드하고, 이를 도커 이미지로 만들어서 ECR에 Push 한다.
-3. Pull & Run (CD) : EC2 서버가 ECR 창고에 접속해서 최신 이미지를 Pull 한 뒤 컨테이너로 실행한다.
+```
+[App Task (프라이빗 서브넷)]
+  ↓ 이미지 pull 시작
+  ↓ Docker daemon이 ecr.amazonaws.com 해석 (Route 53 resolver)
+  ↓ Public IP 받음
+  ↓ NAT Gateway 경유
+  ↓ IGW 통과 → 인터넷
+  ↓ ECR endpoint 도착
+  ↓ "이 이미지 레이어들은 S3에 있어"
+  ↓ S3로 다시 요청 (역시 NAT GW 경유)
+  ↓ 레이어 다운로드
+  ↓ App Task에 이미지 도착
+```
 
 ## 도커 이미지 안에 있는 것들
 
