@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/총 정리.md",
-                "mode": "preview",
+                "file": "20_언어·프레임워크/Java/Garbage Collection(GC).md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "총 정리"
+              "title": "Garbage Collection(GC)"
             }
           }
         ]
@@ -98,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "AWS/총 정리.md",
+            "file": "20_언어·프레임워크/Java/Garbage Collection(GC).md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -149,12 +149,16 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false,
-      "obsidian-git:Open Git source control": false
+      "bases:새 베이스 생성하기": false
     }
   },
   "active": "c171de46b952f252",
   "lastOpenFiles": [
+    "20_언어·프레임워크/Java/JVM(Java Virtual Machine).md",
+    "SSE_포트폴리오_추가2P.pdf",
+    "SSE_트러블슈팅_포트폴리오.pdf",
+    "10_CS/네트워크/TCP vs UDP.md",
+    "10_CS/네트워크/_INDEX.md",
     "AWS/SAA 문제 모음/문제집 1.md",
     "Spring 개념/domain/연관관계 설정 - N+1 문제.md",
     "CS 공부/네트워크/꼭 알아야 할 네트워크 개념.md",
@@ -183,10 +187,7 @@
     "Spring Security(JWT,Cookie,Auth 2.0)/oauth2.0/RefreshToken 을 Redis 에 저장하는 이유와 방법.md",
     "Spring Security(JWT,Cookie,Auth 2.0)/Class/SecurityConfig.md",
     "Spring Security(JWT,Cookie,Auth 2.0)/Class/LoginService.md",
-    "네트워크 2/로드밸런서.md",
     "네트워크 2",
-    "인프라 컴포넌트 2/kafka/Kafka 의 기본 구성.md",
-    "인프라 컴포넌트 2/kafka/Kafka vs Redis.md",
     "인프라 컴포넌트 2/kafka",
     "인프라 컴포넌트 2",
     "MSA 기반 인증,인가 2",
@@ -194,8 +195,6 @@
     "부하 테스트 2",
     "Spring 개념 2/exception",
     "Spring 개념 2/domain",
-    "Spring 개념 2/api",
-    "Spring 개념 2/spring 내부",
     "images/스크린샷 2025-09-10 오후 5.11.28.png",
     "images/스크린샷 2025-09-09 오후 4.24.17.png"
   ]

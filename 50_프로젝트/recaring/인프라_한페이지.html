@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>인프라 아키텍처 — re-caRing</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<style>
+  :root {
+    --bg: #f7f7f8;
+    --card-bg: #ffffff;
+    --text: #0f172a;
+    --text-soft: #475569;
+    --text-dim: #94a3b8;
+    --border: #e5e7eb;
+    --c-security: #2563eb;
+    --c-data:     #0891b2;
+    --c-spof:     #ea580c;
+    --c-cost:     #16a34a;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+                 system-ui, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: "ss01", "ss02";
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 40px 40px;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    margin-bottom: 32px;
+  }
+  .kicker {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin: 0 0 6px;
+    font-weight: 600;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--text-soft);
+    margin: 0;
+  }
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 24px 0 32px;
+  }
+
+  /* ---------- Diagram ---------- */
+  .diagram {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 280px;
+  }
+  .diagram img {
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+  }
+  .diagram .placeholder {
+    color: var(--text-dim);
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .diagram .placeholder code {
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  /* ---------- Grid ---------- */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* ---------- Card ---------- */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 26px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--accent);
+  }
+  .card.security { --accent: var(--c-security); }
+  .card.data     { --accent: var(--c-data); }
+  .card.spof     { --accent: var(--c-spof); }
+  .card.cost     { --accent: var(--c-cost); }
+
+  .card-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .card-icon {
+    font-size: 20px;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+  .card-headline {
+    font-size: 13.5px;
+    color: var(--text-soft);
+    font-style: italic;
+    margin: 0 0 14px;
+    line-height: 1.55;
+  }
+
+  /* table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th, td {
+    text-align: left;
+    padding: 7px 8px;
+    border-bottom: 1px dashed var(--border);
+    vertical-align: top;
+  }
+  th {
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-bottom: 4px;
+  }
+  td:first-child {
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    width: 38%;
+  }
+  td:last-child { color: var(--text-soft); }
+  tr:last-child td { border-bottom: none; }
+
+  /* badges in SPOF */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 6px;
+  }
+  .badge.ok    { background: #dcfce7; color: #15803d; }
+  .badge.warn  { background: #fef3c7; color: #b45309; }
+  .badge.next  { background: #e0e7ff; color: #4338ca; }
+
+  /* footer in card */
+  .card-footer {
+    margin-top: 14px;
+    padding: 10px 12px;
+    background: color-mix(in oklab, var(--accent) 8%, white);
+    color: var(--accent);
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  /* cost highlight row */
+  tr.total td {
+    border-top: 2px solid var(--border);
+    border-bottom: none;
+    padding-top: 10px;
+    color: var(--c-cost);
+    font-weight: 700;
+  }
+
+  /* ---------- Footer summary ---------- */
+  .impact {
+    margin-top: 28px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 22px 28px;
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .impact-item {
+    text-align: center;
+    min-width: 140px;
+  }
+  .impact-item .value {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    display: block;
+    line-height: 1.1;
+  }
+  .impact-item .label {
+    font-size: 11px;
+    color: #cbd5e1;
+    margin-top: 6px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* print */
+  @media print {
+    body { background: white; }
+    .page { padding: 24px; max-width: none; }
+    .card, .diagram, .impact { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ============ Header ============ -->
+    <header>
+      <p class="kicker">SYSTEM ARCHITECTURE</p>
+      <h1>인프라 아키텍처</h1>
+      <p class="subtitle">re-caRing — 보호자/피보호자 실시간 위치 추적 서비스 · AWS ECS 기반</p>
+    </header>
+    <div class="divider"></div>
+
+    <!-- ============ Diagram ============ -->
+    <section class="diagram">
+      <!--
+        다이어그램 이미지를 같은 폴더에 'architecture.png' 으로 두면 자동 표시됩니다.
+        또는 src 경로를 본인 파일에 맞게 수정하세요.
+      -->
+      <img src="architecture.png" alt="re-caRing 인프라 아키텍처 다이어그램"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+      <div class="placeholder" style="display:none;">
+        아키텍처 다이어그램 이미지를 같은 폴더에 <code>architecture.png</code> 로 저장하세요.<br>
+        (또는 HTML 안의 <code>&lt;img src=&quot;...&quot;&gt;</code> 경로를 수정)
+      </div>
+    </section>
+
+    <!-- ============ 4 Cards ============ -->
+    <section class="grid">
+
+      <!-- 보안 -->
+      <article class="card security">
+        <div class="card-head">
+          <span class="card-icon">🔒</span>
+          <span class="card-title">보안</span>
+        </div>
+        <p class="card-headline">외부 노출은 nginx 한 점, 나머지는 전부 격리.</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Private Subnet 격리</td>
+              <td>App · Redis · Monitoring · LLM · RDS 전부 외부 차단</td>
+            </tr>
+            <tr>
+              <td>SSH → SSM 전환</td>
+              <td>22번 포트 폐쇄, SSM Agent 아웃바운드 443으로 키 없이 접속</td>
+            </tr>
+            <tr>
+              <td>NAT Gateway</td>
+              <td>Private Subnet 외부 API 호출 전용 통로, EIP 1개로 트래픽 통제</td>
+            </tr>
+            <tr>
+              <td>비밀 관리</td>
+              <td>Parameter Store SecureString + IAM Role 조회, 코드·이미지에 비밀 X</td>
+            </tr>
+            <tr>
+              <td>보안그룹 체인</td>
+              <td>Nginx-SG → App-SG → RDS-SG, IP 직접 X · 소스 SG 참조만</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card-footer">공격 표면 = 외부에 열린 포트 80 / 443 단 두 개.</div>
+      </article>
+
+      <!-- GPS 값 유실 방지 -->
+      <article class="card data">
+        <div class="card-head">
+          <span class="card-icon">📍</span>
+          <span class="card-title">GPS 값 유실 방지</span>
+        </div>
+        <p class="card-headline">App → Rule 컨테이너 경로를 SQS로 분리. Rule 처리가 죽어도 GPS 이벤트는 큐에 살아남는다.</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>App ↔ Rule 분리</td>
+              <td>App은 SQS publish 후 즉시 응답, Rule 컨테이너가 비동기 수신</td>
+            </tr>
+            <tr>
+              <td>가시성 Timeout</td>
+              <td>Rule 컨테이너 처리 중 죽어도 메시지 큐 복귀 → 유실 0</td>
+            </tr>
+            <tr>
+              <td>DLQ</td>
+              <td>N회 실패 메시지 격리, 무한 재시도 차단 · 사후 분석 가능</td>
+            </tr>
+            <tr>
+              <td>폭주 흡수</td>
+              <td>GPS 트래픽 급증에도 Rule 컨테이너 평탄 처리 (백프레셔)</td>
+            </tr>
+            <tr>
+              <td>분산 영속화</td>
+              <td>SQS 자체가 다중 AZ 저장 → 컨테이너 다 죽어도 메시지 생존</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card-footer">App → Rule 경로의 어느 컴포넌트가 죽어도 GPS 이벤트 유실 0.</div>
+      </article>
+
+      <!-- SPOF -->
+      <article class="card spof">
+        <div class="card-head">
+          <span class="card-icon">⚠️</span>
+          <span class="card-title">SPOF (단일 장애점)</span>
+        </div>
+        <p class="card-headline">해결 / 남은 한계 / 다음 단계 — 솔직하게 분리해 표기.</p>
+        <table>
+          <tbody>
+            <tr>
+              <td><span class="badge ok">해결</span></td>
+              <td>RDS multi-AZ · EFS 다중 AZ 복제 · Cloud Map 실시간 Task 추적 · ECS 서킷브레이커 + 자동 롤백</td>
+            </tr>
+            <tr>
+              <td><span class="badge warn">한계</span></td>
+              <td>Nginx EC2 단일 · App Service 단일 AZ · EC2 launch type ENI 한도</td>
+            </tr>
+            <tr>
+              <td><span class="badge next">다음</span></td>
+              <td>ASG + Nginx 2대 (또는 NLB) · App 멀티 AZ 분산 · Fargate 마이그레이션 검토</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card-footer">단일 장애점을 모르고 있는 것 X · 인지하고 우선순위로 미뤄둔 것.</div>
+      </article>
+
+      <!-- 비용 감축 -->
+      <article class="card cost">
+        <div class="card-head">
+          <span class="card-icon">💰</span>
+          <span class="card-title">비용 감축</span>
+        </div>
+        <p class="card-headline">매니지드 회피로 월 ~$96 절감. 단, 다시 매니지드로 갈 임계점도 인지.</p>
+        <table>
+          <thead>
+            <tr><th>결정</th><th style="width:30%; text-align:right;">월 절감</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nginx t3.nano EC2 ← ALB</td>
+              <td style="text-align:right;">~$56</td>
+            </tr>
+            <tr>
+              <td>EC2 launch type ← Fargate</td>
+              <td style="text-align:right;">~$15</td>
+            </tr>
+            <tr>
+              <td>EFS + Redis AOF ← ElastiCache</td>
+              <td style="text-align:right;">~$25</td>
+            </tr>
+            <tr>
+              <td>VPC Endpoint · ECR Lifecycle</td>
+              <td style="text-align:right;">트래픽·저장 절감</td>
+            </tr>
+            <tr class="total">
+              <td>월 절감 합계</td>
+              <td style="text-align:right;">~$96 / 월</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card-footer">MVP는 비용 우선, 트래픽 임계점 도달 시 SPOF 카드의 ASG/NLB로 전환.</div>
+      </article>
+
+    </section>
+
+    <!-- ============ Impact Summary ============ -->
+    <section class="impact">
+      <div class="impact-item">
+        <span class="value">~$96 / 월</span>
+        <span class="label">매니지드 회피 절감</span>
+      </div>
+      <div class="impact-item">
+        <span class="value">2개 포트</span>
+        <span class="label">외부 공격 표면</span>
+      </div>
+      <div class="impact-item">
+        <span class="value">0건</span>
+        <span class="label">GPS 이벤트 유실</span>
+      </div>
+      <div class="impact-item">
+        <span class="value">3-Tier</span>
+        <span class="label">SPOF 인지 분류</span>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

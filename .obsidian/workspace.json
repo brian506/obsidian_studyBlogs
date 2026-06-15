@@ -4,70 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "e66acdeb95e00456",
+        "id": "dd70b5ae9a30e8dd",
         "type": "tabs",
         "children": [
           {
-            "id": "adfc95333ac65741",
+            "id": "b93799c650a04eb4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📝 recaring 프로젝트/ECS Rolling update (무중단 배포).md",
+                "file": "20_언어·프레임워크/Java/Garbage Collection(GC).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ECS Rolling update (무중단 배포)"
-            }
-          },
-          {
-            "id": "38703d6e27be647b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📝 recaring 프로젝트/ECR 적용해보기.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ECR 적용해보기"
-            }
-          },
-          {
-            "id": "7a0a950448d9be20",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📝 recaring 프로젝트/모든 플로우 정리.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "모든 플로우 정리"
+              "title": "Garbage Collection(GC)"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
-        "id": "1dd925a74c663c48",
+        "id": "c2f15841a4d7f12e",
         "type": "tabs",
         "children": [
           {
-            "id": "964e44c18de9a11d",
+            "id": "179485edabca4db8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📝 recaring 프로젝트/GPS 데이터 흐름 방식.md",
+                "file": "50_프로젝트/recaring/트러블슈팅/OSIV로 인한 커넥션 풀 고갈.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GPS 데이터 흐름 방식"
+              "title": "OSIV로 인한 커넥션 풀 고갈"
             }
           }
         ]
@@ -102,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "synchronize",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -232,54 +203,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7a0a950448d9be20",
+  "active": "179485edabca4db8",
   "lastOpenFiles": [
-    "📝 recaring 프로젝트/GPS 데이터 흐름 방식.md",
-    "📝 recaring 프로젝트/Nginx - Certbot 인증서 갱신 방법.md",
-    "📝 recaring 프로젝트/Git actions 를 이용한 blue-green 무중단 배포.md",
-    "📝 recaring 프로젝트/EFS 적용해보기.md",
-    "📝 recaring 프로젝트/Route 53.md",
-    "📝 recaring 프로젝트/모든 플로우 정리.md",
-    "📝 recaring 프로젝트/ssh 사용하지 않고 ssm 이용해서 보안 최적화.md",
-    "📝 recaring 프로젝트/모니터링 환경.md",
-    "📝 recaring 프로젝트/EC2를 SSM으로 관리하자.md",
-    "📝 recaring 프로젝트/인터넷 통신(IGW, NAT).md",
-    "📝 recaring 프로젝트/SQS + SNS 적용하기.md",
-    "📝 recaring 프로젝트/ECS Rolling update (무중단 배포).md",
-    "📝 recaring 프로젝트/Cloud Map.md",
-    "📝 recaring 프로젝트/ECS 적용하기.md",
-    "📝 recaring 프로젝트/ECR 적용해보기.md",
-    "📝 recaring 프로젝트/AlertManager로 시스템 에러 알림 받기.md",
-    "📝 recaring 프로젝트/ENI.md",
-    "📝 recaring 프로젝트/awsvpc 태스크가 인터넷에 못 나간 이유 — AWS 네트워크와 ECS 아키텍처를 다시 이해하기.md",
-    "AWS/AWS SAA 문제 유형별 정리.md",
-    "AWS/총 정리.md",
-    "images/스크린샷 2026-05-28 04.07.22.png",
-    "CS 공부/네트워크/꼭 알아야 할 네트워크 개념.md",
-    "AWS/EC2 서버에 띄우기.md",
-    "CS 공부/네트워크/DNS 통신.md",
-    "CS 공부/네트워크/네트워크 기초.md",
-    "images/스크린샷 2026-05-27 16.09.19.png",
-    "docker/📌 docker 필수 명령어.md",
-    "CS 공부/인프라 컴포넌트/Redis/Redis 캐싱 전략.md",
-    "무제.canvas",
-    "images/스크린샷 2026-05-11 19.16.31.png",
-    "images/스크린샷 2026-05-11 19.16.12.png",
-    "images/스크린샷 2026-05-11 16.14.49.png",
-    "images/스크린샷 2026-05-07 14.51.05.png",
-    "images/스크린샷 2026-05-05 16.07.15.png",
-    "images/스크린샷 2026-04-30 22.56.24.png",
-    "images/스크린샷 2026-04-30 22.11.22.png",
-    "images/스크린샷 2026-04-30 22.10.32.png",
-    "무제",
-    "📝 recaring 프로젝트",
-    "CS 공부/Java/면접 질문",
-    "무제 1",
-    "AWS/SAA 문제 모음/S3 관련 문제",
-    "AWS/SAA 문제 모음",
-    "AWS/SAA",
-    "Claude",
-    "📌 면접 대비 (NotebookLM 통합 정리)",
-    "📝 티켓팅 프로젝트/면접 대비"
+    "50_프로젝트/recaring/트러블슈팅/인터넷 통신(IGW, NAT).md",
+    "50_프로젝트/recaring/트러블슈팅/가상 스레드 + G1GC.md",
+    "20_언어·프레임워크/Java/Garbage Collection(GC).md",
+    "50_프로젝트/recaring/부하테스트/SSE 부하테스트.md",
+    "50_프로젝트/recaring/트러블슈팅/📌 포트폴리오 정리 - 메모.md",
+    "50_프로젝트/recaring/부하테스트/GPS 스레드 Polling 방식.md",
+    "50_프로젝트/recaring/부하테스트/SSE 부하테스트 과정 및 결과.md",
+    "50_프로젝트/recaring/AWS 서비스/ECS 적용하기.md",
+    "10_CS/데이터베이스/동시성 제어/Synchronized-비관적 락-낙관적 락-레디스 분산락.md",
+    "50_프로젝트/티켓팅/🔓 비관적락과 레디스락 처리.md",
+    "10_CS/운영체제/데드락 (Deadlock).md",
+    "10_CS/운영체제/동기화와 락 (뮤텍스, 세마포어, 모니터).md",
+    "20_언어·프레임워크/Java/JVM(Java Virtual Machine).md",
+    "20_언어·프레임워크/Java/가상 스레드 (Virtual Thread).md",
+    "50_프로젝트/recaring/모든 플로우 정리.md",
+    "50_프로젝트/recaring/부하테스트/📊 SSE 성능 측정 - 목적과 지표.md",
+    "50_프로젝트/recaring/면접대비/📌 면접 핵심 메시지.md",
+    "30_인프라·운영/Redis/Redis 캐싱 전략.md",
+    "50_프로젝트/recaring/AWS 서비스/Cloud Map.md",
+    "50_프로젝트/recaring/AWS 서비스/EC2를 SSM으로 관리하자.md",
+    "50_프로젝트/recaring/AWS 서비스",
+    "50_프로젝트/recaring/모니터링 환경.md",
+    "50_프로젝트/recaring/트러블슈팅/OSIV로 인한 커넥션 풀 고갈.md",
+    "50_프로젝트/recaring/트러블슈팅",
+    "SSE-load-troubleshooting-full.md",
+    "SSE-broadcast-to-polling.md",
+    "50_프로젝트/recaring/면접대비/면접 대비.md",
+    "50_프로젝트/recaring/부하테스트/SSE 부하테스트 v2 — 배경과 원인 분석.md",
+    "50_프로젝트/recaring/면접대비",
+    "images/스크린샷 2026-06-07 12.41.49.png",
+    "images/스크린샷 2026-06-02 15.54.01.png",
+    "images/스크린샷 2026-06-01 21.54.49.png",
+    "images/스크린샷 2026-06-07 11.15.54.png",
+    "images/스크린샷 2026-06-07 10.59.27.png",
+    "50_프로젝트/recaring/부하테스트",
+    "SSE_포트폴리오_추가2P.pdf",
+    "SSE_트러블슈팅_포트폴리오.pdf",
+    "images/스크린샷 2026-06-05 17.56.21.png",
+    "images/스크린샷 2026-06-05 17.56.17.png",
+    "images/스크린샷 2026-06-05 17.56.39.png",
+    "images/스크린샷 2026-06-05 17.56.50.png",
+    "images/스크린샷 2026-06-06 12.03.48.png",
+    "images",
+    "images/IMG_2085.heic",
+    "images/IMG_2079.heic",
+    "images",
+    "무제.canvas"
   ]
 }
