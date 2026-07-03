@@ -483,11 +483,11 @@ SseEmitter는 동시 접속자 상한이 정해져 있어 baseline에 cap이 있
 
 원인별로 정확히 끊는 지점을 매칭한다. 운영 분포에서 가장 효과가 큰 세 처방을 채택했다.
 
-| 원인                                      | 처방                              | 끊는 지점                                          |
-| --------------------------------------- | ------------------------------- | ---------------------------------------------- |
-| ② Serial GC STW                         | **G1GC + MaxGCPauseMillis=200** | STW 길이를 200ms 상한으로 제어                          |
-| ③ broadcast 동시 다발 + ④ STW 후 thundering herd | **Virtual Threads (fire-and-forget)** | Tomcat 워커를 broadcast 작업에서 분리, 워커 점유 ~3ms       |
-| ⑤ wardKey 맵 누수                          | **computeIfPresent**            | 빈 리스트 시 키 원자적 제거 → Old Gen 시간 적분 누적 차단        |
+| 원인                                          | 처방                                    | 끊는 지점                                    |
+| ------------------------------------------- | ------------------------------------- | ---------------------------------------- |
+| ② Serial GC STW                             | **G1GC + MaxGCPauseMillis=200**       | STW 길이를 200ms 상한으로 제어                    |
+| ③ broadcast 동시 다발 + ④ STW 후 thundering herd | **Virtual Threads (fire-and-forget)** | Tomcat 워커를 broadcast 작업에서 분리, 워커 점유 ~3ms |
+| ⑤ wardKey 맵 누수                              | **computeIfPresent**                  | 빈 리스트 시 키 원자적 제거 → Old Gen 시간 적분 누적 차단   |
 
 원인 ①(메모리 천장)은 1차 트러블슈팅의 컨테이너 메모리 증설로 이미 한 번 끊은 라인이고, ②~⑤가 2차의 추가 처방이다.
 

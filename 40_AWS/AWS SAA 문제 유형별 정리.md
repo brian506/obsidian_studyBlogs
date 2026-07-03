@@ -46,15 +46,15 @@
 
 ### 핵심 판단 기준
 
-|요건|정답|
-|---|---|
-|여러 EC2가 동시 공유, Linux|EFS|
-|여러 EC2가 동시 공유, Windows/SMB|FSx for Windows File Server|
-|HPC, 병렬 처리, S3 통합|FSx for Lustre|
-|단일 EC2 전용 영구 저장|EBS|
-|최고 I/O 성능, 임시 데이터|EC2 Instance Store|
-|온프레미스 NFS → S3 캐싱|S3 File Gateway|
-|온프레미스 전체 데이터 로컬 유지 + S3 백업|Volume Gateway (Stored 모드)|
+| 요건                         | 정답                          |
+| -------------------------- | --------------------------- |
+| 여러 EC2가 동시 공유, Linux       | EFS                         |
+| 여러 EC2가 동시 공유, Windows/SMB | FSx for Windows File Server |
+| HPC, 병렬 처리, S3 통합          | FSx for Lustre              |
+| 단일 EC2 전용 영구 저장            | EBS                         |
+| 최고 I/O 성능, 임시 데이터          | EC2 Instance Store          |
+| 온프레미스 NFS → S3 캐싱          | S3 File Gateway             |
+| 온프레미스 전체 데이터 로컬 유지 + S3 백업 | Volume Gateway (Stored 모드)  |
 
 ### 자주 나오는 오답 패턴
 
@@ -62,21 +62,19 @@
 - EBS FSR(빠른 스냅샷 복원) 미설정 시 → Lazy Loading으로 초기 I/O 지연
 - Instance Store는 재시작/종료 시 데이터 소멸 → 영구 저장 목적에 부적합
 
----
-
 ## 4. 메시지 / 이벤트 아키텍처 (SQS / SNS / Kinesis / EventBridge)
 
 ### 핵심 판단 기준
 
-|요건|정답|
-|---|---|
-|순서 보장, 정확히 한 번 처리|SQS FIFO|
-|하나의 이벤트 → 여러 서비스 동시 전달|SNS + SQS Fan-out|
-|실시간 스트리밍, 멀티 컨슈머|Kinesis Data Streams|
-|스트리밍 → S3/Redshift로 적재|Kinesis Data Firehose|
-|스케줄링 기반 작업 실행|EventBridge + Lambda|
-|S3 이벤트 → 여러 서비스 동시 라우팅|S3 → EventBridge|
-|기존 MQTT/AMQP 브로커 마이그레이션|Amazon MQ|
+| 요건                      | 정답                    |
+| ----------------------- | --------------------- |
+| 순서 보장, 정확히 한 번 처리       | SQS FIFO              |
+| 하나의 이벤트 → 여러 서비스 동시 전달  | SNS + SQS Fan-out     |
+| 실시간 스트리밍, 멀티 컨슈머        | Kinesis Data Streams  |
+| 스트리밍 → S3/Redshift로 적재  | Kinesis Data Firehose |
+| 스케줄링 기반 작업 실행           | EventBridge + Lambda  |
+| S3 이벤트 → 여러 서비스 동시 라우팅  | S3 → EventBridge      |
+| 기존 MQTT/AMQP 브로커 마이그레이션 | Amazon MQ             |
 
 ### 자주 나오는 오답 패턴
 
@@ -138,19 +136,19 @@
 
 ### 핵심 판단 기준
 
-|요건|정답|
-|---|---|
-|암호 자동 교체 + DB 통합|Secrets Manager|
-|구성값/암호 저장 (교체 불필요)|SSM Parameter Store|
-|S3 PII 자동 탐지|Macie|
-|이미지/비디오 부적절 콘텐츠 탐지|Rekognition|
-|EC2 취약점 스캔|Inspector|
-|계정 이상 활동 탐지|GuardDuty|
-|SQL Injection, XSS, IP 차단|WAF|
-|대규모 DDoS 방어|Shield Advanced|
-|여러 계정 WAF 중앙 관리|Firewall Manager|
-|VPC 트래픽 패킷 단위 필터링|Network Firewall|
-|감사 목적 암호화 키 사용 로그|SSE-KMS + CloudTrail|
+| 요건                        | 정답                   |
+| ------------------------- | -------------------- |
+| 암호 자동 교체 + DB 통합          | Secrets Manager      |
+| 구성값/암호 저장 (교체 불필요)        | SSM Parameter Store  |
+| S3 PII 자동 탐지              | Macie                |
+| 이미지/비디오 부적절 콘텐츠 탐지        | Rekognition          |
+| EC2 취약점 스캔                | Inspector            |
+| 계정 이상 활동 탐지               | GuardDuty            |
+| SQL Injection, XSS, IP 차단 | WAF                  |
+| 대규모 DDoS 방어               | Shield Advanced      |
+| 여러 계정 WAF 중앙 관리           | Firewall Manager     |
+| VPC 트래픽 패킷 단위 필터링         | Network Firewall     |
+| 감사 목적 암호화 키 사용 로그         | SSE-KMS + CloudTrail |
 
 ### 자주 나오는 오답 패턴
 
@@ -333,12 +331,12 @@
 
 ### 파일 처리
 
-|요건|정답|
-|---|---|
-|SFTP 프로토콜로 S3 업로드|AWS Transfer Family|
-|PDF/이미지에서 텍스트/테이블 추출|Amazon Textract|
-|이미지 부적절 콘텐츠 감지|Amazon Rekognition|
-|Java/PHP 웹앱 배포 + 잦은 기능 테스트|Elastic Beanstalk (URL 스와핑)|
+| 요건                         | 정답                          |
+| -------------------------- | --------------------------- |
+| SFTP 프로토콜로 S3 업로드          | AWS Transfer Family         |
+| PDF/이미지에서 텍스트/테이블 추출       | Amazon Textract             |
+| 이미지 부적절 콘텐츠 감지             | Amazon Rekognition          |
+| Java/PHP 웹앱 배포 + 잦은 기능 테스트 | Elastic Beanstalk (URL 스와핑) |
 
 ### 자주 나오는 오답 패턴
 

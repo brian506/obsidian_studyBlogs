@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "dd70b5ae9a30e8dd",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b93799c650a04eb4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20_언어·프레임워크/Java/Garbage Collection(GC).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Garbage Collection(GC)"
-            }
-          }
-        ]
-      },
-      {
         "id": "c2f15841a4d7f12e",
         "type": "tabs",
         "children": [
@@ -33,12 +13,61 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50_프로젝트/recaring/트러블슈팅/OSIV로 인한 커넥션 풀 고갈.md",
+                "file": "40_AWS/상황별 정리.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OSIV로 인한 커넥션 풀 고갈"
+              "title": "상황별 정리"
+            }
+          },
+          {
+            "id": "247587f2bd7d00cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_CS/보안/HTTPS와 TLS 핸드셰이크.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "HTTPS와 TLS 핸드셰이크"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "943eca9c51a2eee6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "34b338fad9f94810",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_CS/운영체제/메모리 관리와 가상 메모리.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "메모리 관리와 가상 메모리"
+            }
+          },
+          {
+            "id": "fcf88c7613b4fb62",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40_AWS/AWS SAA 문제 유형별 정리.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AWS SAA 문제 유형별 정리"
             }
           }
         ]
@@ -73,7 +102,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "synchronize",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,14 +117,10 @@
             "id": "0a5baa0956327077",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📝 recaring 프로젝트/Nginx - Certbot 인증서 갱신 방법.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Nginx - Certbot 인증서 갱신 방법"
+              "title": "새 탭"
             }
           },
           {
@@ -203,36 +228,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "179485edabca4db8",
+  "active": "247587f2bd7d00cd",
   "lastOpenFiles": [
-    "50_프로젝트/recaring/트러블슈팅/인터넷 통신(IGW, NAT).md",
-    "50_프로젝트/recaring/트러블슈팅/가상 스레드 + G1GC.md",
-    "20_언어·프레임워크/Java/Garbage Collection(GC).md",
-    "50_프로젝트/recaring/부하테스트/SSE 부하테스트.md",
-    "50_프로젝트/recaring/트러블슈팅/📌 포트폴리오 정리 - 메모.md",
-    "50_프로젝트/recaring/부하테스트/GPS 스레드 Polling 방식.md",
-    "50_프로젝트/recaring/부하테스트/SSE 부하테스트 과정 및 결과.md",
-    "50_프로젝트/recaring/AWS 서비스/ECS 적용하기.md",
-    "10_CS/데이터베이스/동시성 제어/Synchronized-비관적 락-낙관적 락-레디스 분산락.md",
-    "50_프로젝트/티켓팅/🔓 비관적락과 레디스락 처리.md",
+    "10_CS/보안/JWT 보안 이슈와 대응.md",
+    "10_CS/보안/OAuth 2.0과 OIDC.md",
+    "10_CS/데이터베이스/조인 알고리즘과 조인 종류.md",
+    "10_CS/데이터베이스/샤딩·파티셔닝·리플리케이션.md",
+    "40_AWS/상황별 정리.md",
+    "10_CS/운영체제/캐시 메모리와 지역성.md",
+    "10_CS/운영체제/시스템콜과 인터럽트.md",
+    "40_AWS/총정리 보충.md",
+    "10_CS/운영체제/메모리 관리와 가상 메모리.md",
     "10_CS/운영체제/데드락 (Deadlock).md",
-    "10_CS/운영체제/동기화와 락 (뮤텍스, 세마포어, 모니터).md",
-    "20_언어·프레임워크/Java/JVM(Java Virtual Machine).md",
-    "20_언어·프레임워크/Java/가상 스레드 (Virtual Thread).md",
-    "50_프로젝트/recaring/모든 플로우 정리.md",
-    "50_프로젝트/recaring/부하테스트/📊 SSE 성능 측정 - 목적과 지표.md",
-    "50_프로젝트/recaring/면접대비/📌 면접 핵심 메시지.md",
-    "30_인프라·운영/Redis/Redis 캐싱 전략.md",
-    "50_프로젝트/recaring/AWS 서비스/Cloud Map.md",
-    "50_프로젝트/recaring/AWS 서비스/EC2를 SSM으로 관리하자.md",
+    "40_AWS/총 정리.md",
+    "40_AWS/AWS SAA 문제 유형별 정리.md",
+    "40_AWS/SAA 문제 모음/문제집 9.md",
+    "40_AWS/SAA 문제 모음/문제집 10.md",
+    "40_AWS/SAA 문제 모음/문제집 5.md",
+    "40_AWS/SAA 문제 모음/문제집 6.md",
+    "40_AWS/SAA 문제 모음/문제집 7.md",
+    "40_AWS/SAA 문제 모음/문제집 8.md",
+    "40_AWS/SAA 문제 모음/문제집 11.md",
+    "40_AWS/SAA 문제 모음/문제집 12.md",
+    "40_AWS/SAA 문제 모음/문제집 13.md",
+    "40_AWS/SAA 문제 모음/문제집 14.md",
+    "40_AWS/SAA 문제 모음/문제집 15.md",
+    "40_AWS/SAA 문제 모음/문제집 16.md",
+    "40_AWS/SAA 문제 모음/문제집 18.md",
+    "40_AWS/SAA 문제 모음/문제집 17.md",
+    "images/스크린샷 2026-06-19 18.20.42.png",
     "50_프로젝트/recaring/AWS 서비스",
-    "50_프로젝트/recaring/모니터링 환경.md",
-    "50_프로젝트/recaring/트러블슈팅/OSIV로 인한 커넥션 풀 고갈.md",
     "50_프로젝트/recaring/트러블슈팅",
-    "SSE-load-troubleshooting-full.md",
-    "SSE-broadcast-to-polling.md",
-    "50_프로젝트/recaring/면접대비/면접 대비.md",
-    "50_프로젝트/recaring/부하테스트/SSE 부하테스트 v2 — 배경과 원인 분석.md",
     "50_프로젝트/recaring/면접대비",
     "images/스크린샷 2026-06-07 12.41.49.png",
     "images/스크린샷 2026-06-02 15.54.01.png",
@@ -246,7 +272,6 @@
     "images/스크린샷 2026-06-05 17.56.17.png",
     "images/스크린샷 2026-06-05 17.56.39.png",
     "images/스크린샷 2026-06-05 17.56.50.png",
-    "images/스크린샷 2026-06-06 12.03.48.png",
     "images",
     "images/IMG_2085.heic",
     "images/IMG_2079.heic",
