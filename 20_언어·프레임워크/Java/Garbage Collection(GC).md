@@ -65,6 +65,7 @@ Heap 영역에서 **객체가 처음 생성될 때 2가지 전제 조건**을 �
 - Eden 영역에 **신규객체가 가득 차면 Minor GC 발생**
 	- Minor GC는 Young Generation 영역만 수행
 	- YG 영역이 가득 찼을 때만 Minor GC 수행
+	- `Stop-The-World`가 여기서 발생!
 - 정기적인 쓰레기 수집 후(Mark And Sweep) 살아남은 객체들은 survival 영역으로 보냄
 	- survival 0 이 다 쌓이고 survival 1 으로 가는 것이 아니라 Minor GC 가 발생할 때마다 순차적으로 각각 보내게 됨
 #### 2.  Survivor 0 / Survivor 1
@@ -205,11 +206,21 @@ Full GC:         Young/Mixed가 실패했을 때만 (매우 드묾)
 - 이전의 GC들과 달리, 객체가 순차적으로 이동하는 것이 아니라 영역(Region) 별 객체가 재할당된다.
 
 #### 동작 순서
+
 1. **Young GC** : 앱이 돌아가면서 Eden 칸들이 차면, STW을 걸고 Eden 칸의 살아있는 객체를 Survivor 칸으로 옮기거나 Old 칸으로 이동
+	- **Young GC에서 STW 발생하는 이유**
+	  - 살아남은 객체를 **다른 리전으로 이동**시켜야 하기 떄문
+
 2. **Concurrent Marking** : 힙 베모리가 어느정도 (45%정도) 차오르면, 앱을 멈추지 않고 비동기로 Old 칸들의 살아있는 객체에 마킹을 하고 쓰레기 비율을 계산
+
 3. **Mixed GC** : 마킹이 끝나면, Young GC를 할 때 쓰레기가 가장 많은 Old 칸들을 같이 청소
+
 4. **Full GC** : Young, Mixed GC 실패 시 
 
+### STW가 발생하는데 G1GC가 좋은 이유?
+
+모든 GC과정에서 STW가 발생해도 **예측 가능한 짧은 멈춤 시간**내에서 발생
+- 한 번에 전체 힙을 뒤지는 것이 아니라, 목표 시간에 처리할 수 있는 리전 개수만 선택해서 청소하기 떄문
 #### G1GC의 핵심 단계
 
 | 단계 | 동작 | STW 여부 |
@@ -240,7 +251,7 @@ Full GC:         Young/Mixed가 실패했을 때만 (매우 드묾)
 - 강력한 Concurrency와 가벼운 GC로직으로 Heap 사이즈에 영향을 받지 않고 일정한 pause 시간이 소요
 
 #### [ZGC GC]
-![](../../images/스크린샷%202026-01-20%2000.40.03.png)
+![673](../../images/스크린샷%202026-01-20%2000.40.03.png)
 - Java 15 출시 (production-ready)
 - **대량의 메모리(8MB ~ 16TB)** 를 low-latency로 잘 처리하기 위해 출시된 GC
 - **ZPage** 라는 영역을 사용하고, 크기가 2MB 배수로 동적으로 운영
