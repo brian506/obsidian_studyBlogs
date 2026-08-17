@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "자바 과목평가 대비.md",
+                "file": "50_프로젝트/recaring/트러블슈팅/룰베이스 스크립트 관련 의사결정 회고.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "자바 과목평가 대비"
+              "title": "룰베이스 스크립트 관련 의사결정 회고"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50_프로젝트/recaring/트러블슈팅/GPS History 파티셔닝과 인덱스 적용.md",
+                "file": "AI/AI & 기계학습/AI & 기계학습 방법론.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GPS History 파티셔닝과 인덱스 적용"
+              "title": "AI & 기계학습 방법론"
             }
           }
         ],
@@ -105,7 +105,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 383.3296928405762,
+    "collapsed": true
   },
   "right": {
     "id": "3744353d0a22725b",
@@ -198,15 +199,39 @@
   },
   "active": "bdfb9e52903697e4",
   "lastOpenFiles": [
-    "images/스크린샷 2026-08-10 10.03.51.png",
-    "images/스크린샷 2026-08-10 10.02.34.png",
-    "images/스크린샷 2026-08-10 09.44.50.png",
-    "images/스크린샷 2026-08-10 09.38.00.png",
-    "images/스크린샷 2026-08-10 09.30.24.png",
+    "AI/AI & 기계학습/선형회귀.md",
+    "AI/AI & 기계학습/AI & 기계학습 방법론.md",
+    "AI/AI & 기계학습/로직스틱 회귀.md",
+    "images/스크린샷 2026-08-16 20.02.21.png",
+    "images/스크린샷 2026-08-16 19.13.31.png",
     "50_프로젝트/recaring/트러블슈팅/룰베이스 스크립트 관련 의사결정 회고.md",
-    "50_프로젝트/recaring/트러블슈팅/GPS History 파티셔닝과 인덱스 적용.md",
-    "20_언어·프레임워크/Java/Call by Value, Call by Reference.md",
     "자바 과목평가 대비.md",
+    "AI/AI & 기계학습/AI와 기계학습 기초.md",
+    "images/스크린샷 2026-08-16 17.29.19.png",
+    "images/스크린샷 2026-08-16 17.23.06.png",
+    "images/스크린샷 2026-08-16 17.22.47.png",
+    "images/스크린샷 2026-08-16 17.22.36.png",
+    "images/스크린샷 2026-08-16 17.17.35.png",
+    "images/스크린샷 2026-08-16 17.09.52.png",
+    "images/스크린샷 2026-08-16 17.09.41.png",
+    "images/스크린샷 2026-08-16 17.09.34.png",
+    "50_프로젝트/recaring/AWS 서비스/ECS 적용하기.md",
+    "AI/AI & 기계학습",
+    "AI",
+    "50_프로젝트/recaring/AWS 서비스/ECS Rolling update (무중단 배포).md",
+    "50_프로젝트/recaring/트러블슈팅/ECS ASG 스케일링 한계.md",
+    "50_프로젝트/recaring/트러블슈팅/📌 포폴 초안 - TS05 ASG 도입과 철회.md",
+    "50_프로젝트/recaring/트러블슈팅/📌 포폴 초안 - TS04 퍼블릭 서브넷 아웃바운드 차단.md",
+    "50_프로젝트/recaring/트러블슈팅/📌 포폴 초안 - TS03 ECS로의 전환 과정.md",
+    "50_프로젝트/recaring/트러블슈팅/GPS History 파티셔닝과 인덱스 적용.md",
+    "리눅스/프로세스 관리/프로세스 관리.md",
+    "리눅스/프로세스 관리/fork()와 execve().md",
+    "리눅스/프로세스 관리",
+    "리눅스/명령어 정리.md",
+    "리눅스",
+    "algo/환영합니다!.md",
+    "algo",
+    "20_언어·프레임워크/Java/Call by Value, Call by Reference.md",
     "40_AWS/AWS SAA 문제 유형별 정리.md",
     "50_프로젝트/recaring/트러블슈팅/SSE 브로드캐스트에서 폴링으로.md",
     "50_프로젝트/recaring/트러블슈팅/무제.md",
@@ -214,36 +239,12 @@
     "10_CS/네트워크/CDN.md",
     "50_프로젝트/recaring/트러블슈팅/실시간 위치 SSE 스트림이 클라이언트에 도달하지 않는 문제.md",
     "50_프로젝트/recaring/트러블슈팅/SSE 환경에서 필요한 Nginx 설정.md",
-    "images/스크린샷 2026-07-28 23.11.16.png",
-    "images/스크린샷 2026-07-28 22.31.35.png",
-    "images/스크린샷 2026-07-28 00.09.11.png",
     "10_CS/운영체제/운영체제 면접 리스트.md",
-    "10_CS/네트워크/면접대비/네트워크 면접 질문 리스트.md",
-    "10_CS/네트워크/HTTP 1.1 vs 2 vs 3 (QUIC).md",
-    "10_CS/네트워크/TCP vs UDP.md",
-    "40_AWS/SAA 문제 모음/문제집 5.md",
-    "10_CS/운영체제/데드락 (Deadlock).md",
     "10_CS/네트워크/면접대비",
-    "10_CS/데이터베이스/동시성 제어/Synchronized-비관적 락-낙관적 락-레디스 분산락.md",
-    "10_CS/운영체제/동기화와 락 (뮤텍스, 세마포어, 모니터).md",
-    "50_프로젝트/티켓팅/면접 대비/📌 티켓팅 락 관련 면접 예상 질문.md",
-    "10_CS/운영체제/_INDEX.md",
-    "50_프로젝트/티켓팅/면접 대비/🎫 티켓팅 프로젝트 핵심 정리.md",
-    "50_프로젝트/티켓팅/🔓 비관적락과 레디스락 처리.md",
-    "10_CS/운영체제/메모리 관리와 가상 메모리.md",
-    "10_CS/보안/HTTPS와 TLS 핸드셰이크.md",
-    "images/스크린샷 2026-06-19 18.20.42.png",
     "50_프로젝트/recaring/AWS 서비스",
     "50_프로젝트/recaring/트러블슈팅",
     "50_프로젝트/recaring/면접대비",
-    "images/스크린샷 2026-06-07 12.41.49.png",
-    "images/스크린샷 2026-06-02 15.54.01.png",
     "50_프로젝트/recaring/부하테스트",
-    "SSE_포트폴리오_추가2P.pdf",
-    "SSE_트러블슈팅_포트폴리오.pdf",
-    "images",
-    "images/IMG_2085.heic",
-    "images/IMG_2079.heic",
     "무제.canvas"
   ]
 }
