@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI/AI & 기계학습/AI & 기계학습 방법론.md",
+                "file": "AI/AI & 기계학습/자연어 처리 기본.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AI & 기계학습 방법론"
+              "title": "자연어 처리 기본"
             }
           }
         ],
@@ -199,8 +199,12 @@
   },
   "active": "bdfb9e52903697e4",
   "lastOpenFiles": [
-    "AI/AI & 기계학습/선형회귀.md",
+    "images/스크린샷 2026-08-18 22.49.37.png",
+    "images/스크린샷 2026-08-18 22.33.22.png",
+    "images/스크린샷 2026-08-18 22.28.12.png",
     "AI/AI & 기계학습/AI & 기계학습 방법론.md",
+    "AI/AI & 기계학습/자연어 처리 기본.md",
+    "AI/AI & 기계학습/선형회귀.md",
     "AI/AI & 기계학습/로직스틱 회귀.md",
     "images/스크린샷 2026-08-16 20.02.21.png",
     "images/스크린샷 2026-08-16 19.13.31.png",
@@ -213,8 +217,6 @@
     "images/스크린샷 2026-08-16 17.22.36.png",
     "images/스크린샷 2026-08-16 17.17.35.png",
     "images/스크린샷 2026-08-16 17.09.52.png",
-    "images/스크린샷 2026-08-16 17.09.41.png",
-    "images/스크린샷 2026-08-16 17.09.34.png",
     "50_프로젝트/recaring/AWS 서비스/ECS 적용하기.md",
     "AI/AI & 기계학습",
     "AI",
@@ -238,8 +240,6 @@
     "10_CS/분산시스템/MSA 란.md",
     "10_CS/네트워크/CDN.md",
     "50_프로젝트/recaring/트러블슈팅/실시간 위치 SSE 스트림이 클라이언트에 도달하지 않는 문제.md",
-    "50_프로젝트/recaring/트러블슈팅/SSE 환경에서 필요한 Nginx 설정.md",
-    "10_CS/운영체제/운영체제 면접 리스트.md",
     "10_CS/네트워크/면접대비",
     "50_프로젝트/recaring/AWS 서비스",
     "50_프로젝트/recaring/트러블슈팅",
